@@ -1,0 +1,25 @@
+{
+  "name": "developer-kit-docs",
+  "version": "1.0.0",
+  "description": "A comprehensive engineering knowledge hub covering React, Node.js, Express, SWE concepts, architecture, AWS, and more",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  },
+  "keywords": [
+    "documentation",
+    "react",
+    "nodejs",
+    "express",
+    "aws",
+    "architecture",
+    "developer-kit"
+  ],
+  "author": "",
+  "license": "MIT"
+}
