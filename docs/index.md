@@ -1,51 +1,55 @@
 ---
-title: React Mastery Companion
+title: AWS AI Practitioner Study Guide
 ---
 
-# React Mastery Companion
+# AWS AI Practitioner Study Guide
 
-Welcome to the digital book version of the React Mastery Companion. This aggregates and restructures the existing guides in `docs/` into a cohesive learning path from fundamentals to advanced engineering and interview preparation.
+Welcome to your comprehensive study guide for the AWS Certified AI Practitioner exam. This guide includes detailed content and practice questions across all exam domains.
 
-## How to Use This Book
+## About This Guide
 
-- Move sequentially for a full curriculum or jump into any chapter.
-- Each chapter has: Concept Overview, Deep Theory, Practical Examples, Pitfalls, Decision Guidelines.
-- Cross-links reference original source docs for extended reading.
+This study guide is designed to help you prepare for the AWS Certified AI Practitioner certification. Each section includes:
 
-## Table of Contents
+- Comprehensive coverage of exam topics
+- 50 multiple-choice questions per domain
+- Detailed explanations for all answers
+- Real-world AWS AI/ML service examples
 
-1. [Preface](/00-preface)
-2. [Core React Foundations](/01-core-react-foundations)
-3. [Rendering & Concurrency](/02-rendering-concurrency)
-4. [Hooks Fundamentals](/03-hooks-fundamentals)
-5. [Hooks Advanced](/04-hooks-advanced)
-6. [State Management Strategies](/05-state-management-strategies)
-7. [Redux Toolkit & Global State](/06-redux-toolkit-global-state)
-8. [Server State & TanStack Query](/07-server-state-tanstack-query)
-9. [Caching & Offline UX](/08-caching-optimistic-offline)
-10. [Performance Engineering](/09-performance-engineering)
-11. [Component Design Patterns](/10-component-design-patterns)
-12. [Accessibility & UX Quality](/11-accessibility-ux-quality)
-13. [Testing & Reliability](/12-testing-reliability)
-14. [Security & Robustness](/13-security-robustness)
-15. [Advanced Topics (SSR, Suspense, TS)](/14-advanced-topics-ssr-suspense-ts)
-16. [Anti-Patterns & Refactoring](/15-anti-patterns-refactoring)
-17. [Interview Cheat Sheet](/16-interview-cheatsheet)
-18. [Recipes & Utilities](/17-recipes-utilities)
-19. [Glossary & Further Reading](/18-glossary-further-reading)
+## Study Materials
 
-## Build Locally
+### Overview
+- [Comprehensive Overview](/aws-ai-practitioner/overview) - Complete introduction to AWS AI/ML
+- [Overview MCQs](/aws-ai-practitioner/overview-mcq) - 50 practice questions covering overview concepts
+
+### Exam Domains
+1. [Domain 1: Fundamentals of AI and ML](/aws-ai-practitioner/domain-1) - Core concepts and terminology
+2. [Domain 2: Fundamentals of Generative AI](/aws-ai-practitioner/domain-2) - LLMs, transformers, and foundation models
+3. [Domain 3: Applications of Foundation Models](/aws-ai-practitioner/domain-3) - Practical use cases and implementation
+4. [Domain 4: Guidelines for Responsible AI](/aws-ai-practitioner/domain-4) - Ethics, fairness, and best practices
+5. [Domain 5: Security, Compliance & Governance](/aws-ai-practitioner/domain-5-security-compliance) - Security frameworks and compliance
+
+### AWS AI/ML Services
+- [AWS AI/ML Services Guide](/aws-ai-practitioner/aws-services) - Comprehensive coverage of SageMaker, Bedrock, and other services
+
+## How to Use This Guide
+
+1. Start with the Overview to understand AWS AI/ML fundamentals
+2. Study each domain sequentially
+3. Practice with the MCQs to test your knowledge
+4. Review AWS Services to understand practical implementations
+5. Revisit areas where you need more practice
+
+## Local Development
 
 ```bash
-pnpm install # or npm i / yarn
+npm install
 npm run docs:dev
 ```
 
-## Generate Static Site
+## Build for Production
 
 ```bash
 npm run docs:build
-npm run docs:serve # preview production build
 ```
 
 ## PDF Generation (Optional)
