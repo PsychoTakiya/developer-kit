@@ -187,6 +187,10 @@ export default defineConfig({
             link: '/aws-ai-practitioner/overview'
           },
           {
+            text: 'Overview - MCQ Practice',
+            link: '/aws-ai-practitioner/overview-mcq'
+          },
+          {
             text: 'Domain 1: Fundamentals of AI and ML',
             link: '/aws-ai-practitioner/domain-1-fundamentals'
           },
@@ -205,6 +209,10 @@ export default defineConfig({
           {
             text: 'Domain 5: Security, Compliance and Governance',
             link: '/aws-ai-practitioner/domain-5-security-compliance'
+          },
+          {
+            text: 'AWS AI/ML Services',
+            link: '/aws-ai-practitioner/aws-services'
           }
         ]
       },
