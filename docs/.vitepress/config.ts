@@ -5,6 +5,10 @@ export default defineConfig({
   description: 'A comprehensive engineering book (Foundations to Advanced)',
   lastUpdated: true,
   themeConfig: {
+    outline: {
+      level: [2, 3],
+      label: 'On this page'
+    },
     nav: [
       { text: 'Guide', link: '/' },
       { text: 'Glossary', link: '/react/18-glossary-further-reading' }
@@ -172,6 +176,35 @@ export default defineConfig({
           {
             text: 'Express Middleware Flow',
             link: '/node-express/15-express-middleware-flow'
+          }
+        ]
+      },
+      {
+        text: 'AWS AI Practitioner',
+        items: [
+          {
+            text: 'Overview',
+            link: '/aws-ai-practitioner/overview'
+          },
+          {
+            text: 'Domain 1: Fundamentals of AI and ML',
+            link: '/aws-ai-practitioner/domain-1-fundamentals'
+          },
+          {
+            text: 'Domain 2: Fundamentals of Generative AI',
+            link: '/aws-ai-practitioner/domain-2-generative-ai'
+          },
+          {
+            text: 'Domain 3: Applications of Foundation Models',
+            link: '/aws-ai-practitioner/domain-3-applications'
+          },
+          {
+            text: 'Domain 4: Guidelines for Responsible AI',
+            link: '/aws-ai-practitioner/domain-4-responsible-ai'
+          },
+          {
+            text: 'Domain 5: Security, Compliance and Governance',
+            link: '/aws-ai-practitioner/domain-5-security-compliance'
           }
         ]
       },
