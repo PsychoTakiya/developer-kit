@@ -1,6 +1,6 @@
 # Domain 3: Applications of Foundation Models
 
-90 focused MCQs for AWS AI Practitioner exam preparation, organized by exam objectives.
+100 focused MCQs for AWS AI Practitioner exam preparation, organized by exam objectives.
 
 ---
 
@@ -248,9 +248,129 @@ UX for latency: streaming (real-time tokens), progress indicators ("Thinking..."
 
 ---
 
-## 3.2 Prompt Engineering Techniques (Q21-30)
+### Q21: What are the key criteria for selecting a pre-trained foundation model?
 
-### Q21: What is zero-shot prompting?
+**A)** Only cost matters  
+**B)** Cost, modality, latency, language support, model size, customization capabilities, context length  
+**C)** Random selection
+
+**Answer: B**
+
+Selection criteria: cost per token, supported modalities (text/image/code), inference latency, multi-lingual support, model size (small/large), fine-tuning availability, max context window. Balance requirements across dimensions for use case.
+
+---
+
+### Q22: What is the temperature parameter in FM inference?
+
+**A)** Server cooling setting  
+**B)** Controls randomness/creativity: low=deterministic, high=creative  
+**C)** Processing speed
+
+**Answer: B**
+
+Temperature (0.0-1.0): controls output randomness. Low (0.0-0.3): deterministic, factual, consistent. High (0.7-1.0): creative, diverse, unpredictable. Use low for factual tasks (customer support), high for creative content (brainstorming, stories).
+
+---
+
+### Q23: What are top-p and top-k parameters in FM inference?
+
+**A)** Model size settings  
+**B)** Control output diversity by limiting token selection during generation  
+**C)** API endpoints
+
+**Answer: B**
+
+Top-p (nucleus sampling): select from smallest token set with cumulative probability ≥ p (e.g., 0.9). Top-k: select from top k most likely tokens. Both control diversity. Lower values = more focused, higher = more varied.
+
+---
+
+### Q24: How do input and output length parameters affect FM applications?
+
+**A)** No impact  
+**B)** Longer inputs increase latency/cost; output length limits control response size and cost  
+**C)** Only affect storage
+
+**Answer: B**
+
+Input length: more tokens = higher latency and cost. Output length (max_tokens): limits response size, controls cost, prevents runaway generation. Set appropriately: summaries need less, detailed analysis needs more. Balance completeness vs efficiency.
+
+---
+
+### Q25: What is model customization and when is it needed?
+
+**A)** Changing model name  
+**B)** Fine-tuning or continued pre-training for domain-specific performance  
+**C)** Not available
+
+**Answer: B**
+
+Customization options: fine-tuning (train on examples), continued pre-training (domain corpus). Needed when: specialized terminology, specific formats, industry-specific knowledge, brand voice consistency. More expensive than prompting but better for high-volume specialized tasks.
+
+---
+
+### Q26: What is multi-lingual support consideration in model selection?
+
+**A)** All models equal for all languages  
+**B)** Models vary in language coverage and quality; check training data distribution  
+**C)** Language doesn't matter
+
+**Answer: B**
+
+Multi-lingual considerations: English typically best quality (most training data). Check model's supported languages, quality varies by language. Some models better for specific regions (e.g., European languages, Asian languages). Test performance in target languages.
+
+---
+
+### Q27: What is RAG (Retrieval-Augmented Generation) architecture?
+
+**A)** Standalone model inference  
+**B)** Retrieve relevant documents from knowledge base, provide as context to FM for grounded generation  
+**C)** Random document selection
+
+**Answer: B**
+
+RAG workflow: user query → convert to embedding → search vector DB for similar docs → retrieve top results → provide docs + query to FM → generate grounded response. Reduces hallucinations, enables current information, grounds answers in company data.
+
+---
+
+### Q28: What are business applications of RAG?
+
+**A)** Only chatbots  
+**B)** Knowledge base Q&A, customer support, document search, compliance assistance, internal wikis  
+**C)** Database management
+
+**Answer: B**
+
+RAG use cases: employee knowledge portals, customer support (search docs for answers), compliance queries (regulations/policies), product documentation, research assistance, legal document analysis. Bedrock Knowledge Bases provide managed RAG implementation.
+
+---
+
+### Q29: Which AWS services support vector storage for embeddings in RAG applications?
+
+**A)** Only S3  
+**B)** OpenSearch Service, Aurora, Neptune, DocumentDB, RDS for PostgreSQL (pgvector)  
+**C)** CloudWatch
+
+**Answer: B**
+
+Vector DB options: OpenSearch (k-NN plugin), Aurora PostgreSQL (pgvector), Neptune Analytics (graph + vectors), DocumentDB (vector search), RDS PostgreSQL (pgvector extension). Choose based on existing infrastructure, scale, query patterns.
+
+---
+
+### Q30: What is Amazon Bedrock Knowledge Bases?
+
+**A)** Database service  
+**B)** Managed RAG solution: ingest docs, create embeddings, store in vector DB, retrieve for generation  
+**C)** Model training
+
+**Answer: B**
+
+Bedrock Knowledge Bases: fully managed RAG. Upload docs (S3), automatic chunking/embedding, vector storage (OpenSearch Serverless), retrieval orchestration, citation tracking. Simplifies RAG implementation vs building custom. Integrates with Bedrock models.
+
+---
+
+## 3.2 Prompt Engineering Techniques (Q31-40)
+
+### Q31: What is zero-shot prompting?
 
 **A)** Providing many examples  
 **B)** Asking model to perform task without examples, relying on pre-training  
@@ -262,7 +382,7 @@ Zero-shot: direct instruction without examples. "Summarize this article." Works 
 
 ---
 
-### Q22: What is few-shot prompting?
+### Q32: What is few-shot prompting?
 
 **A)** No examples provided  
 **B)** Including 2-5 examples of input-output pairs to guide model behavior  
@@ -274,7 +394,7 @@ Few-shot: provide examples in prompt. "Classify sentiment: 'Great product!' → 
 
 ---
 
-### Q23: What is chain-of-thought (CoT) prompting?
+### Q33: What is chain-of-thought (CoT) prompting?
 
 **A)** Single-step answers  
 **B)** Prompting model to show reasoning steps before final answer  
@@ -286,7 +406,7 @@ CoT: "Let's think step by step." Model explains reasoning, improving complex pro
 
 ---
 
-### Q24: What is the role of system prompts vs user prompts?
+### Q34: What is the role of system prompts vs user prompts?
 
 **A)** No difference  
 **B)** System sets behavior/role; user provides specific request  
@@ -298,7 +418,7 @@ System prompt: defines AI persona, rules, constraints ("You are a helpful financ
 
 ---
 
-### Q25: What is prompt template design?
+### Q35: What is prompt template design?
 
 **A)** Random text generation  
 **B)** Reusable prompt structures with placeholders for dynamic content  
@@ -310,7 +430,7 @@ Templates: "Summarize the following {document_type} in {length} sentences: {cont
 
 ---
 
-### Q26: What is negative prompting?
+### Q36: What is negative prompting?
 
 **A)** Being rude to AI  
 **B)** Explicitly stating what NOT to do or include  
@@ -322,7 +442,7 @@ Negative prompts: "Summarize but don't include technical jargon" or "Don't make 
 
 ---
 
-### Q27: What is the importance of prompt clarity and specificity?
+### Q37: What is the importance of prompt clarity and specificity?
 
 **A)** Vague prompts work fine  
 **B)** Clear, specific instructions reduce ambiguity and improve output quality  
@@ -334,7 +454,7 @@ Specific prompts: "Write 3 bullet points summarizing key financial risks" better
 
 ---
 
-### Q28: What is role prompting?
+### Q38: What is role prompting?
 
 **A)** Assigning user roles  
 **B)** Instructing model to adopt specific persona or expertise  
@@ -346,7 +466,7 @@ Role prompting: "You are an expert Python developer" or "Act as a customer servi
 
 ---
 
-### Q29: What is iterative prompt refinement?
+### Q39: What is iterative prompt refinement?
 
 **A)** Using first prompt always  
 **B)** Testing and improving prompts based on output quality  
@@ -358,7 +478,7 @@ Prompt engineering is iterative: test prompt → evaluate output → refine word
 
 ---
 
-### Q30: What is the difference between instruction-following and completion-style prompts?
+### Q40: What is the difference between instruction-following and completion-style prompts?
 
 **A)** No difference  
 **B)** Instruction gives command; completion provides beginning for model to continue  
@@ -370,9 +490,9 @@ Instruction: "Translate to French: Hello" (command). Completion: "The three main
 
 ---
 
-## 3.3 Training and Fine-Tuning Foundation Models (Q31-40)
+## 3.3 Training and Fine-Tuning Foundation Models (Q41-50)
 
-### Q31: What is pre-training in foundation models?
+### Q41: What is pre-training in foundation models?
 
 **A)** Final training step  
 **B)** Initial training on massive general datasets to learn language patterns  
@@ -384,7 +504,7 @@ Pre-training: training on internet-scale text data (books, web, code) to learn l
 
 ---
 
-### Q32: What is fine-tuning a foundation model?
+### Q42: What is fine-tuning a foundation model?
 
 **A)** Pre-training the model  
 **B)** Additional training on specific dataset to specialize model for domain/task  
@@ -396,7 +516,7 @@ Fine-tuning: train pre-trained model on custom data (company documents, specific
 
 ---
 
-### Q33: What is the difference between fine-tuning and prompt engineering?
+### Q43: What is the difference between fine-tuning and prompt engineering?
 
 **A)** No difference  
 **B)** Fine-tuning modifies model weights; prompting provides runtime instructions  
@@ -408,7 +528,7 @@ Fine-tuning: permanent model changes, requires training data/compute, better for
 
 ---
 
-### Q34: What is instruction fine-tuning?
+### Q44: What is instruction fine-tuning?
 
 **A)** Training on raw text  
 **B)** Fine-tuning on instruction-response pairs to improve instruction-following  
@@ -420,7 +540,7 @@ Instruction tuning: train on datasets of instructions + desired responses. Makes
 
 ---
 
-### Q35: What is RLHF (Reinforcement Learning from Human Feedback)?
+### Q45: What is RLHF (Reinforcement Learning from Human Feedback)?
 
 **A)** Supervised learning only  
 **B)** Training using human ratings of responses to align model with preferences  
@@ -432,7 +552,7 @@ RLHF: humans rate model outputs (helpful/harmful), model learns from feedback. I
 
 ---
 
-### Q36: What data is needed for fine-tuning a foundation model?
+### Q46: What data is needed for fine-tuning a foundation model?
 
 **A)** No data required  
 **B)** Domain-specific examples (100s-1000s) with inputs and desired outputs  
@@ -444,7 +564,7 @@ Fine-tuning data: task-specific examples (prompts + completions), typically 100-
 
 ---
 
-### Q37: What is continuous fine-tuning?
+### Q47: What is continuous fine-tuning?
 
 **A)** One-time training  
 **B)** Regularly updating fine-tuned model with new data to maintain accuracy  
@@ -456,7 +576,7 @@ Continuous fine-tuning: periodic retraining as new data arrives (customer intera
 
 ---
 
-### Q38: What is the cost consideration for fine-tuning vs prompting?
+### Q48: What is the cost consideration for fine-tuning vs prompting?
 
 **A)** Both are free  
 **B)** Fine-tuning has upfront training cost; prompting costs per inference  
@@ -468,7 +588,7 @@ Fine-tuning: training cost (compute hours) + hosting custom model. Prompting: pe
 
 ---
 
-### Q39: What is model distillation?
+### Q49: What is model distillation?
 
 **A)** Removing models  
 **B)** Training smaller model to mimic larger model's behavior  
@@ -480,7 +600,7 @@ Distillation: large "teacher" model generates training data for small "student" 
 
 ---
 
-### Q40: What is the evaluation process during fine-tuning?
+### Q50: What is the evaluation process during fine-tuning?
 
 **A)** No evaluation needed  
 **B)** Split data into train/validation/test; monitor metrics during training; test on held-out data  
@@ -492,11 +612,11 @@ Fine-tuning evaluation: hold out test set (10-20%), track training/validation lo
 
 ---
 
-## 3.4 Evaluating Foundation Model Performance (Q41-50)
+## 3.4 Evaluating Foundation Model Performance (Q51-60)
 
-## 3.4 Evaluating Foundation Model Performance (Q41-50)
+## 3.4 Evaluating Foundation Model Performance (Q51-60)
 
-### Q41: What are the main categories of FM evaluation metrics?
+### Q51: What are the main categories of FM evaluation metrics?
 
 **A)** Speed only  
 **B)** Quality (accuracy, relevance), safety (toxicity, bias), and performance (latency, cost)  
@@ -508,7 +628,7 @@ Evaluation dimensions: Quality (task accuracy, output relevance), Safety (harmfu
 
 ---
 
-### Q42: What is BLEU score used for?
+### Q52: What is BLEU score used for?
 
 **A)** Sentiment analysis  
 **B)** Evaluating translation/text generation quality by comparing to reference texts  
@@ -520,7 +640,7 @@ BLEU (Bilingual Evaluation Understudy): measures overlap between generated and r
 
 ---
 
-### Q43: What is ROUGE score?
+### Q53: What is ROUGE score?
 
 **A)** Color metric  
 **B)** Evaluating summarization by measuring recall of reference summary words  
@@ -532,7 +652,7 @@ ROUGE (Recall-Oriented Understudy for Gisting Evaluation): measures overlap with
 
 ---
 
-### Q44: What is human evaluation for foundation models?
+### Q54: What is human evaluation for foundation models?
 
 **A)** Automated only  
 **B)** Having humans rate outputs for quality, helpfulness, harmfulness  
@@ -544,7 +664,7 @@ Human eval: raters assess responses (thumbs up/down, Likert scale, pairwise comp
 
 ---
 
-### Q45: What is A/B testing for FM applications?
+### Q55: What is A/B testing for FM applications?
 
 **A)** Testing two models  
 **B)** Comparing two variants (prompts, models, parameters) with real users to measure impact  
@@ -556,7 +676,7 @@ A/B testing: split traffic between variants (e.g., two prompts), measure metrics
 
 ---
 
-### Q46: What is hallucination detection in FM evaluation?
+### Q56: What is hallucination detection in FM evaluation?
 
 **A)** Ignoring incorrect outputs  
 **B)** Identifying when model generates false or unsupported information  
@@ -568,7 +688,7 @@ Hallucination: model generates plausible but incorrect facts. Detection: compare
 
 ---
 
-### Q47: What is toxicity/safety evaluation?
+### Q57: What is toxicity/safety evaluation?
 
 **A)** Not important  
 **B)** Measuring presence of harmful, offensive, or biased content in outputs  
@@ -580,7 +700,7 @@ Safety evaluation: automated classifiers detect toxicity, hate speech, bias, sex
 
 ---
 
-### Q48: What is bias evaluation in foundation models?
+### Q58: What is bias evaluation in foundation models?
 
 **A)** Checking file size  
 **B)** Assessing fairness across demographic groups, stereotypes in outputs  
@@ -592,7 +712,7 @@ Bias evaluation: test for gender/race/age stereotypes, unfair treatment. Methods
 
 ---
 
-### Q49: What is latency vs accuracy trade-off in FM evaluation?
+### Q59: What is latency vs accuracy trade-off in FM evaluation?
 
 **A)** No trade-off exists  
 **B)** Larger/better models typically slower; must balance quality needs with speed requirements  
@@ -604,7 +724,7 @@ Trade-off: larger models (Claude Opus) more accurate but slower/costlier; smalle
 
 ---
 
-### Q50: What is benchmark dataset evaluation?
+### Q60: What is benchmark dataset evaluation?
 
 **A)** Custom testing only  
 **B)** Testing model on standardized datasets (MMLU, HellaSwag) to compare capabilities  
@@ -616,9 +736,9 @@ Benchmarks: standardized tests for comparison. MMLU (multitask knowledge), Hella
 
 ---
 
-## Foundation Model Applications (Q51-58)
+## Foundation Model Applications (Q61-68)
 
-### Q51: What are the main application categories for foundation models?
+### Q61: What are the main application categories for foundation models?
 
 **A)** Only text generation  
 **B)** Text, images, code, and multimodal  
@@ -630,7 +750,7 @@ Foundation models power: text generation (chatbots, content), image generation (
 
 ---
 
-### Q52: What is a chatbot built on foundation models?
+### Q62: What is a chatbot built on foundation models?
 
 **A)** Rule-based Q&A system  
 **B)** Conversational AI using LLMs for natural dialogue  
@@ -642,7 +762,7 @@ LLM-powered chatbots understand context, maintain conversation history, handle c
 
 ---
 
-### Q53: What is content generation using GenAI?
+### Q63: What is content generation using GenAI?
 
 **A)** Copying existing content  
 **B)** Creating original marketing copy, articles, summaries  
@@ -654,7 +774,7 @@ Content generation: create marketing copy, blog posts, product descriptions, soc
 
 ---
 
-### Q54: What is code generation with foundation models?
+### Q64: What is code generation with foundation models?
 
 **A)** Compiling code  
 **B)** Writing code from natural language descriptions  
@@ -666,7 +786,7 @@ Code generation: convert requirements to code, complete functions, generate test
 
 ---
 
-### Q55: What are multimodal foundation models?
+### Q65: What are multimodal foundation models?
 
 **A)** Single data type only  
 **B)** Handle multiple input/output types (text, images, audio)  
@@ -678,7 +798,7 @@ Multimodal models process and generate across data types: text-to-image (Stable 
 
 ---
 
-### Q56: What is document summarization?
+### Q66: What is document summarization?
 
 **A)** Highlighting keywords  
 **B)** Condensing long documents to key points  
@@ -690,7 +810,7 @@ Summarization: extract main ideas from long documents (reports, research, articl
 
 ---
 
-### Q57: What is sentiment analysis in GenAI?
+### Q67: What is sentiment analysis in GenAI?
 
 **A)** Grammar checking  
 **B)** Determining emotional tone (positive, negative, neutral)  
@@ -702,7 +822,7 @@ Sentiment analysis: classify text emotion/opinion. Applications: customer feedba
 
 ---
 
-### Q58: What is Amazon Bedrock Agents?
+### Q68: What is Amazon Bedrock Agents?
 
 **A)** Human customer service  
 **B)** Autonomous AI completing multi-step tasks  
@@ -714,9 +834,9 @@ Bedrock Agents: orchestrate complex workflows, call APIs, access data sources, b
 
 ---
 
-## Conversational AI (Q59-64)
+## Conversational AI (Q69-74)
 
-### Q59: What is the key advantage of LLM-based chatbots?
+### Q69: What is the key advantage of LLM-based chatbots?
 
 **A)** Faster than rule-based  
 **B)** Understand context and handle ambiguity  
@@ -728,7 +848,7 @@ LLM chatbots understand natural language nuance, maintain context across turns, 
 
 ---
 
-### Q60: What is conversation memory in chatbots?
+### Q70: What is conversation memory in chatbots?
 
 **A)** Database storage  
 **B)** Maintaining context across message exchanges  
@@ -740,7 +860,7 @@ Conversation memory: chatbot remembers previous messages in session. Enables coh
 
 ---
 
-### Q61: How do you handle sensitive topics in chatbots?
+### Q71: How do you handle sensitive topics in chatbots?
 
 **A)** Ignore them  
 **B)** Use guardrails to detect and redirect  
@@ -752,7 +872,7 @@ Guardrails detect sensitive topics (medical advice, legal, financial). Respond w
 
 ---
 
-### Q62: What is intent recognition in conversational AI?
+### Q72: What is intent recognition in conversational AI?
 
 **A)** User authentication  
 **B)** Understanding what user wants to accomplish  
@@ -764,7 +884,7 @@ Intent recognition: classify user goal (book appointment, check status, get refu
 
 ---
 
-### Q63: What is Amazon Lex used for?
+### Q73: What is Amazon Lex used for?
 
 **A)** Image generation  
 **B)** Building voice and text chatbots  
@@ -776,7 +896,7 @@ Lex: AWS service for chatbots with ASR (speech recognition) and NLU (language un
 
 ---
 
-### Q64: How do you evaluate chatbot quality?
+### Q74: How do you evaluate chatbot quality?
 
 **A)** Speed only  
 **B)** User satisfaction, task completion, accuracy  
@@ -788,9 +908,9 @@ Metrics: user satisfaction scores (thumbs up/down), task completion rate, respon
 
 ---
 
-## Search & Knowledge Retrieval (Q65-70)
+## Search & Knowledge Retrieval (Q75-80)
 
-### Q65: What is semantic search?
+### Q75: What is semantic search?
 
 **A)** Keyword matching  
 **B)** Understanding meaning and intent, not just exact words  
@@ -802,7 +922,7 @@ Semantic search: finds conceptually similar content using embeddings. "Car probl
 
 ---
 
-### Q66: What is the role of embeddings in search?
+### Q76: What is the role of embeddings in search?
 
 **A)** Encrypt data  
 **B)** Convert text to vectors for similarity comparison  
@@ -814,7 +934,7 @@ Embeddings map text to vector space where similar meanings cluster. Search: conv
 
 ---
 
-### Q67: What is Amazon Kendra?
+### Q77: What is Amazon Kendra?
 
 **A)** Foundation model  
 **B)** Intelligent enterprise search using ML  
@@ -826,7 +946,7 @@ Kendra: ML-powered search for enterprise documents. Understands natural language
 
 ---
 
-### Q68: How does RAG improve search applications?
+### Q78: How does RAG improve search applications?
 
 **A)** Faster indexing  
 **B)** Generates direct answers from retrieved documents  
@@ -838,7 +958,7 @@ RAG: retrieve relevant docs + generate natural language answer. Users get direct
 
 ---
 
-### Q69: What is re-ranking in search?
+### Q79: What is re-ranking in search?
 
 **A)** Initial retrieval  
 **B)** Second-pass scoring to refine result relevance  
@@ -850,7 +970,7 @@ Re-ranking: after initial retrieval (e.g., top 20 docs), use sophisticated model
 
 ---
 
-### Q70: What is query expansion in semantic search?
+### Q80: What is query expansion in semantic search?
 
 **A)** Making queries longer  
 **B)** Generating alternative query phrasings to improve recall  
@@ -862,9 +982,9 @@ Query expansion: LLM generates similar questions/phrasings for user query. Searc
 
 ---
 
-## Code & Developer Tools (Q71-75)
+## Code & Developer Tools (Q81-85)
 
-### Q71: What can Amazon CodeWhisperer do?
+### Q81: What can Amazon CodeWhisperer do?
 
 **A)** Only syntax highlighting  
 **B)** Real-time code suggestions, completions, security scanning  
@@ -876,7 +996,7 @@ CodeWhisperer: AI pair programmer providing inline code suggestions, function ge
 
 ---
 
-### Q72: What is code explanation using LLMs?
+### Q82: What is code explanation using LLMs?
 
 **A)** Running code  
 **B)** Generating natural language descriptions of code logic  
@@ -888,7 +1008,7 @@ Code explanation: LLM reads code, describes functionality in plain language. Hel
 
 ---
 
-### Q73: What is test generation using GenAI?
+### Q83: What is test generation using GenAI?
 
 **A)** Running tests  
 **B)** Automatically creating unit tests from code  
@@ -900,7 +1020,7 @@ Test generation: LLM analyzes function, generates unit tests covering edge cases
 
 ---
 
-### Q74: What is code refactoring assistance?
+### Q84: What is code refactoring assistance?
 
 **A)** Deleting code  
 **B)** Suggesting improvements for code quality, performance  
@@ -912,7 +1032,7 @@ Refactoring assistance: LLM suggests cleaner, more efficient code. Improves read
 
 ---
 
-### Q75: What is bug fixing with GenAI?
+### Q85: What is bug fixing with GenAI?
 
 **A)** Automatic deployment  
 **B)** Suggesting fixes for identified errors  
@@ -924,9 +1044,9 @@ Bug fixing: provide error message + code, LLM suggests potential fixes with expl
 
 ---
 
-## Specialized Applications (Q76-80)
+## Specialized Applications (Q86-90)
 
-### Q76: What is AI-powered personalization?
+### Q86: What is AI-powered personalization?
 
 **A)** Same experience for all users  
 **B)** Tailoring content/recommendations to individual users  
@@ -938,7 +1058,7 @@ Personalization: LLMs generate customized content, recommendations, emails based
 
 ---
 
-### Q77: What is document extraction using GenAI?
+### Q87: What is document extraction using GenAI?
 
 **A)** Deleting documents  
 **B)** Extracting structured data from unstructured documents  
@@ -950,7 +1070,7 @@ Document extraction: parse contracts, invoices, forms to extract key fields (dat
 
 ---
 
-### Q78: What is knowledge base question answering?
+### Q88: What is knowledge base question answering?
 
 **A)** General chatbot  
 **B)** Answering questions from company-specific documents  
@@ -962,7 +1082,7 @@ Knowledge base Q&A: RAG system over company documents (policies, procedures, man
 
 ---
 
-### Q79: What is meeting summarization?
+### Q89: What is meeting summarization?
 
 **A)** Scheduling meetings  
 **B)** Generating concise summaries of meeting transcripts  
@@ -974,7 +1094,7 @@ Meeting summarization: transcribe meeting (Transcribe), summarize key points, ac
 
 ---
 
-### Q80: What are AI agents in enterprise applications?
+### Q90: What are AI agents in enterprise applications?
 
 **A)** Human employees  
 **B)** Autonomous AI systems completing business workflows  
@@ -986,9 +1106,9 @@ AI agents: orchestrate multi-step business tasks. Examples: expense report proce
 
 ---
 
-## Enterprise & Industry Applications (Q81-88)
+## Enterprise & Industry Applications (Q91-98)
 
-### Q81: What is AI-powered customer service routing?
+### Q91: What is AI-powered customer service routing?
 
 **A)** Random assignment  
 **B)** Using LLMs to classify and route customer inquiries to right team  
@@ -1000,7 +1120,7 @@ LLM analyzes customer message, determines intent/urgency/complexity, routes to a
 
 ---
 
-### Q82: What is automated report generation?
+### Q92: What is automated report generation?
 
 **A)** Manual reporting  
 **B)** GenAI creates business reports from data/templates  
@@ -1012,7 +1132,7 @@ LLM generates executive summaries, financial reports, performance analyses from 
 
 ---
 
-### Q83: What is contract analysis with GenAI?
+### Q93: What is contract analysis with GenAI?
 
 **A)** Contract storage  
 **B)** Extracting clauses, identifying risks, comparing terms  
@@ -1024,7 +1144,7 @@ LLM reads contracts, extracts key terms (dates, obligations, penalties), flags r
 
 ---
 
-### Q84: What is email response automation?
+### Q94: What is email response automation?
 
 **A)** Auto-reply "out of office"  
 **B)** GenAI drafts contextual responses to customer emails  
@@ -1036,7 +1156,7 @@ LLM reads customer email, understands context, drafts appropriate response. Huma
 
 ---
 
-### Q85: What is product description generation?
+### Q95: What is product description generation?
 
 **A)** Copying manufacturer specs  
 **B)** Creating unique, engaging product descriptions at scale  
@@ -1048,7 +1168,7 @@ LLM generates descriptions from product attributes (size, color, features). Opti
 
 ---
 
-### Q86: What is AI-powered data enrichment?
+### Q96: What is AI-powered data enrichment?
 
 **A)** Data backup  
 **B)** Enhancing records with additional generated information  
@@ -1060,7 +1180,7 @@ LLM adds missing fields, standardizes formats, generates summaries, categorizes 
 
 ---
 
-### Q87: What is voice-of-customer analysis?
+### Q97: What is voice-of-customer analysis?
 
 **A)** Recording calls  
 **B)** Analyzing feedback at scale for themes, sentiment, insights  
@@ -1072,7 +1192,7 @@ LLM processes reviews, support tickets, social media, surveys. Identifies patter
 
 ---
 
-### Q88: What is legal document drafting assistance?
+### Q98: What is legal document drafting assistance?
 
 **A)** Replacing lawyers  
 **B)** Generating first drafts of contracts, agreements, clauses  
@@ -1084,9 +1204,9 @@ LLM creates initial document drafts from templates and requirements. Lawyer revi
 
 ---
 
-## Creative & Media Applications (Q89-90)
+## Creative & Media Applications (Q99-100)
 
-### Q89: What is AI-powered video script generation?
+### Q99: What is AI-powered video script generation?
 
 **A)** Video editing  
 **B)** Creating video scripts from brief or topic  
@@ -1098,7 +1218,7 @@ LLM writes video scripts: scenes, dialogue, narration. Input: topic, duration, a
 
 ---
 
-### Q90: What is style transfer in image generation?
+### Q100: What is style transfer in image generation?
 
 **A)** Copying images  
 **B)** Applying artistic style to images (e.g., "like Van Gogh")  
@@ -1115,6 +1235,7 @@ Image models apply artistic styles to photos. Input: content image + style refer
 **Key Concepts to Remember:**
 
 1. **3.0 Applications of Foundation Models (Q1-10):**
+
    - **Application Categories:** Text, code, images, multimodal
    - **RAG Architecture:** Retrieval + generation for grounded answers
    - **Agentic AI:** Multi-step autonomous task execution
@@ -1122,7 +1243,10 @@ Image models apply artistic styles to photos. Input: content image + style refer
    - **Streaming:** Real-time token delivery for better UX
    - **Orchestration:** Coordinating multiple services/models
 
-2. **3.1 Design Considerations (Q11-20):**
+2. **3.1 Design Considerations (Q11-30):**
+
+   - **Model Selection:** Cost, modality, latency, language support, size, customization, context length
+   - **Inference Parameters:** Temperature (randomness), top-p/top-k (diversity), max_tokens (output length)
    - **Latency Management:** Model size, context length, streaming
    - **Context Window:** Token limits, truncation strategies
    - **Cost Optimization:** Token minimization, caching, provisioned throughput
@@ -1130,8 +1254,11 @@ Image models apply artistic styles to photos. Input: content image + style refer
    - **Security:** Input validation, guardrails, PII protection
    - **Observability:** Logging, monitoring, tracing
    - **Scalability:** Auto-scaling, queue-based processing
+   - **RAG Deep Dive:** Retrieval workflow, vector databases, Bedrock Knowledge Bases
+   - **Vector Databases:** OpenSearch, Aurora, Neptune, DocumentDB, RDS PostgreSQL (pgvector)
 
-3. **3.2 Prompt Engineering (Q21-30):**
+3. **3.2 Prompt Engineering (Q31-40):**
+
    - **Zero-shot:** Direct instruction without examples
    - **Few-shot:** 2-5 examples to guide behavior
    - **Chain-of-thought:** Step-by-step reasoning
@@ -1140,7 +1267,8 @@ Image models apply artistic styles to photos. Input: content image + style refer
    - **Negative Prompting:** Explicit constraints
    - **Iterative Refinement:** Test, measure, improve
 
-4. **3.3 Training & Fine-Tuning (Q31-40):**
+4. **3.3 Training & Fine-Tuning (Q41-50):**
+
    - **Pre-training:** Initial large-scale training (expensive, done once)
    - **Fine-tuning:** Domain specialization with custom data
    - **Instruction Tuning:** Training on instruction-response pairs
@@ -1149,7 +1277,8 @@ Image models apply artistic styles to photos. Input: content image + style refer
    - **Continuous Fine-tuning:** Regular updates with new data
    - **Distillation:** Training smaller models from larger ones
 
-5. **3.4 Model Evaluation (Q41-50):**
+5. **3.4 Model Evaluation (Q51-60):**
+
    - **Evaluation Dimensions:** Quality, safety, performance
    - **Automated Metrics:** BLEU (translation), ROUGE (summarization)
    - **Human Evaluation:** Rating quality, helpfulness, harm
@@ -1158,7 +1287,7 @@ Image models apply artistic styles to photos. Input: content image + style refer
    - **Safety Testing:** Toxicity, bias, harmful content
    - **Benchmarks:** MMLU, HellaSwag, HumanEval
 
-6. **Practical Applications (Q51-90):**
+6. **Practical Applications (Q61-100):**
    - **Conversational AI:** Context management, intent recognition, guardrails
    - **Search & Retrieval:** Semantic search, embeddings, RAG, re-ranking
    - **Code Tools:** CodeWhisperer for generation, testing, security
@@ -1166,6 +1295,7 @@ Image models apply artistic styles to photos. Input: content image + style refer
    - **Creative:** Content generation, style transfer, multimedia
 
 **AWS Services Map:**
+
 - **Bedrock:** Foundation models, Agents, Guardrails, Knowledge Bases
 - **CodeWhisperer:** AI code assistant
 - **Kendra:** Enterprise search
@@ -1175,6 +1305,7 @@ Image models apply artistic styles to photos. Input: content image + style refer
 - **SageMaker Clarify:** Bias detection
 
 **Study Focus:**
+
 - Understand when to use prompting vs fine-tuning
 - Know design patterns for production FM applications
 - Master prompt engineering techniques (few-shot, CoT)
