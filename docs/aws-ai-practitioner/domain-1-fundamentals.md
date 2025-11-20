@@ -1,6 +1,6 @@
 # Domain 1: Fundamentals of AI and ML
 
-30 focused MCQs for AWS AI Practitioner exam preparation.
+110 focused MCQs for AWS AI Practitioner exam preparation.
 
 ---
 
@@ -126,9 +126,251 @@ CNNs excel at spatial data (images, video). Use convolutional layers to detect f
 
 ---
 
-## ML Lifecycle (Q11-18)
+## Task Statement 1.1: AI/ML/DL Terms & Definitions (Q11-30)
 
-### Q11: What is the first phase of the ML lifecycle?
+### Q11: What is a neural network?
+
+**A)** Database structure  
+**C)** Computing system inspired by biological neurons with interconnected nodes  
+**B)** Network security protocol
+
+**Answer: C**
+
+Neural network: computational model with layers of interconnected nodes (neurons). Input layer receives data, hidden layers process patterns, output layer produces predictions. Foundation of deep learning.
+
+---
+
+### Q12: What is computer vision?
+
+**A)** Hardware displays  
+**B)** AI field enabling machines to interpret and understand visual information  
+**C)** Screen resolution technology
+
+**Answer: B**
+
+Computer vision: AI subfield for analyzing images/video. Tasks: object detection, facial recognition, scene understanding, OCR. Examples: Amazon Rekognition, autonomous vehicles, medical imaging analysis.
+
+---
+
+### Q13: What is Natural Language Processing (NLP)?
+
+**A)** Network protocols  
+**C)** AI field enabling machines to understand and generate human language  
+**B)** Programming language
+
+**Answer: C**
+
+NLP: AI subfield for text/speech processing. Tasks: sentiment analysis, translation, question answering, text generation. Examples: Amazon Comprehend, chatbots, voice assistants, LLMs.
+
+---
+
+### Q14: What is a model in ML?
+
+**A)** 3D design template  
+**B)** Trained mathematical representation learned from data  
+**C)** Hardware specification
+
+**Answer: B**
+
+Model: mathematical function learned from training data. Maps inputs to outputs (e.g., email → spam/not spam). Contains learned parameters (weights). Saved and deployed for inference on new data.
+
+---
+
+### Q15: What is an algorithm in AI/ML?
+
+**A)** Final trained model  
+**B)** Step-by-step procedure/recipe for learning patterns from data  
+**C)** Data storage method
+
+**Answer: B**
+
+Algorithm: method for training models. Examples: decision trees, neural networks, linear regression, XGBoost. Different algorithms suit different data types and problems. SageMaker provides built-in algorithms.
+
+---
+
+### Q16: What is training in ML?
+
+**A)** User education  
+**C)** Process of learning patterns from data by adjusting model parameters  
+**B)** Testing models
+
+**Answer: C**
+
+Training: feed data to algorithm, adjust weights to minimize prediction errors. Uses training dataset. Iterative process (epochs). Result: trained model ready for inference. Most compute-intensive phase.
+
+---
+
+### Q17: What is inferencing in ML?
+
+**A)** Training phase  
+**B)** Using trained model to make predictions on new unseen data  
+**C)** Data collection
+
+**Answer: B**
+
+Inferencing (prediction): apply trained model to new inputs. Real-time (immediate predictions) or batch (process many at once). Lower compute than training. Deployed models serve inference requests.
+
+---
+
+### Q18: What is a Large Language Model (LLM)?
+
+**A)** Large database  
+**C)** Massive neural network trained on text to understand and generate language  
+**B)** Code compiler
+
+**Answer: C**
+
+LLM: foundation model with billions/trillions of parameters trained on vast text corpus. Examples: GPT, Claude, Llama. Capabilities: text generation, translation, question answering, summarization. Accessed via Amazon Bedrock.
+
+---
+
+### Q19: What is tabular data?
+
+**A)** Unstructured text  
+**C)** Data organized in rows and columns with defined features  
+**B)** Images
+
+**Answer: C**
+
+Tabular: structured data in tables (spreadsheets, databases). Rows = records, columns = features. Examples: customer demographics, sales transactions. Common ML algorithms: XGBoost, linear models, decision trees.
+
+---
+
+### Q20: What is time-series data?
+
+**A)** Random data points  
+**B)** Sequential data points indexed by time  
+**C)** Static snapshots
+
+**Answer: B**
+
+Time-series: data collected at regular time intervals. Examples: stock prices, sensor readings, web traffic, sales over time. Requires specialized algorithms (ARIMA, LSTM, Prophet). Amazon Forecast handles time-series.
+
+---
+
+### Q21: What is image data?
+
+**A)** Text files  
+**C)** Visual data represented as pixel matrices  
+**B)** Audio waveforms
+
+**Answer: C**
+
+Image data: 2D/3D arrays of pixels with color values. Unstructured. Requires CNNs for processing. Use cases: object detection, facial recognition, medical imaging. Services: Rekognition, Textract (OCR).
+
+---
+
+### Q22: What is text data?
+
+**A)** Structured tables  
+**B)** Unstructured sequences of characters and words  
+**C)** Numerical data
+
+**Answer: B**
+
+Text data: unstructured strings (documents, emails, reviews, social media). Requires NLP/LLMs. Preprocessing: tokenization, embeddings. Use cases: sentiment analysis, classification, generation. Services: Comprehend, Bedrock.
+
+---
+
+### Q23: What is structured data?
+
+**A)** Random unorganized information  
+**C)** Data organized in predefined format with clear schema  
+**B)** Images and videos
+
+**Answer: C**
+
+Structured: organized, labeled, easily searchable. Fixed schema (rows/columns). Examples: relational databases, CSV files, JSON with schema. Easier to analyze. Traditional ML algorithms work well.
+
+---
+
+### Q24: What is unstructured data?
+
+**A)** Database tables  
+**B)** Data without predefined format or organization  
+**C)** Spreadsheets
+
+**Answer: B**
+
+Unstructured: no fixed format. Examples: text documents, images, audio, video, social media. Harder to analyze. Requires deep learning (CNNs, RNNs, Transformers). Represents ~80% of enterprise data.
+
+---
+
+### Q25: What is labeled data?
+
+**A)** Data without annotations  
+**C)** Training data with correct answers/annotations attached  
+**B)** Encrypted data
+
+**Answer: C**
+
+Labeled: data with ground truth tags. Examples: images with object labels, emails marked spam/not spam. Required for supervised learning. Expensive to create. Services: SageMaker Ground Truth for labeling.
+
+---
+
+### Q26: What is unlabeled data?
+
+**A)** Corrupted data  
+**B)** Data without annotations or ground truth labels  
+**C)** Encrypted data
+
+**Answer: B**
+
+Unlabeled: raw data without tags. Cheaper and more abundant than labeled. Used in unsupervised learning (clustering, anomaly detection) and semi-supervised learning. Can be labeled later if needed.
+
+---
+
+### Q27: What is the key difference between AI and ML?
+
+**A)** No difference  
+**C)** AI is broader (includes rule-based); ML specifically learns from data  
+**B)** ML is broader than AI
+
+**Answer: C**
+
+AI: broad concept of machines performing intelligent tasks (includes rule-based systems like chess engines). ML: subset of AI that learns patterns from data without explicit programming. ML is one approach to achieve AI.
+
+---
+
+### Q28: What is the key difference between ML and Deep Learning?
+
+**A)** No difference  
+**B)** DL uses multi-layered neural networks; ML includes simpler algorithms  
+**C)** DL cannot learn from data
+
+**Answer: B**
+
+ML: includes all learning algorithms (linear regression, decision trees, neural networks). Deep Learning: subset using multi-layered neural networks. DL requires more data/compute but excels with unstructured data (images, text, audio).
+
+---
+
+### Q29: What are characteristics of batch inference?
+
+**A)** Real-time individual predictions  
+**C)** Processes many requests together offline, cost-effective, higher latency  
+**B)** Interactive responses
+
+**Answer: C**
+
+Batch: process large datasets at once (e.g., nightly scoring of all customers). Scheduled runs, higher throughput, lower cost per prediction. Use when immediate results not needed. SageMaker Batch Transform.
+
+---
+
+### Q30: What are characteristics of real-time inference?
+
+**A)** Processes data once daily  
+**B)** Immediate individual predictions with low latency (< 100ms)  
+**C)** No infrastructure needed
+
+**Answer: B**
+
+Real-time: immediate predictions per request. Low latency (milliseconds). Always-on endpoint. Higher cost per prediction. Use when user waiting or time-sensitive (fraud detection, recommendations). SageMaker Endpoints.
+
+---
+
+## ML Lifecycle (Q31-38)
+
+### Q31: What is the first phase of the ML lifecycle?
 
 **A)** Model training  
 **B)** Business problem definition  
@@ -140,7 +382,7 @@ Start with clear business problem and success metrics. Determine if ML is approp
 
 ---
 
-### Q12: What percentage of ML effort typically goes to data preparation?
+### Q32: What percentage of ML effort typically goes to data preparation?
 
 **A)** 20%  
 **B)** 50%  
@@ -152,7 +394,7 @@ Data collection, cleaning, labeling, and feature engineering consume most effort
 
 ---
 
-### Q13: What is feature engineering?
+### Q33: What is feature engineering?
 
 **A)** Deploying models  
 **B)** Creating meaningful input variables from raw data  
@@ -164,7 +406,7 @@ Feature engineering transforms raw data into useful model inputs. Examples: "day
 
 ---
 
-### Q14: What is the purpose of a validation dataset?
+### Q34: What is the purpose of a validation dataset?
 
 **A)** Train the model  
 **B)** Tune hyperparameters and evaluate during training  
@@ -176,7 +418,7 @@ Validation set checks performance during training, tunes hyperparameters, preven
 
 ---
 
-### Q15: What is accuracy as a metric?
+### Q35: What is accuracy as a metric?
 
 **A)** Only for regression  
 **B)** Percentage of correct predictions overall  
@@ -188,7 +430,7 @@ Accuracy = correct predictions / total predictions. Simple but misleading with i
 
 ---
 
-### Q16: What is precision in classification?
+### Q36: What is precision in classification?
 
 **A)** Of predicted positives, how many were correct  
 **B)** Of actual positives, how many we caught  
@@ -200,7 +442,7 @@ Precision = true positives / (true positives + false positives). Measures false 
 
 ---
 
-### Q17: What is recall in classification?
+### Q37: What is recall in classification?
 
 **A)** Of predicted positives, how many were correct  
 **B)** Of actual positives, how many we caught  
@@ -212,7 +454,7 @@ Recall = true positives / (true positives + false negatives). Measures how many 
 
 ---
 
-### Q18: What is model drift?
+### Q38: What is model drift?
 
 **A)** Model training errors  
 **B)** Model performance degrades due to data changes over time  
@@ -224,9 +466,9 @@ Drift occurs when real-world data distributions change (e.g., COVID-19 changing 
 
 ---
 
-## Bias & Fairness (Q19-24)
+## Bias & Fairness (Q39-44)
 
-### Q19: What is data collection bias?
+### Q39: What is data collection bias?
 
 **A)** Algorithm preferences  
 **B)** Training data doesn't represent real-world population  
@@ -238,7 +480,7 @@ Training data unrepresentative of deployment population. Example: facial recogni
 
 ---
 
-### Q20: What AWS service detects bias in ML models?
+### Q40: What AWS service detects bias in ML models?
 
 **A)** Amazon SageMaker Clarify  
 **B)** Amazon Forecast  
@@ -250,7 +492,7 @@ SageMaker Clarify analyzes datasets and models for bias, provides explainability
 
 ---
 
-### Q21: What is algorithmic bias?
+### Q41: What is algorithmic bias?
 
 **A)** Bad training data  
 **B)** Algorithm design favors certain outcomes  
@@ -262,7 +504,7 @@ Bias from algorithm choices: optimization targets, loss functions, feature selec
 
 ---
 
-### Q22: What is label bias?
+### Q42: What is label bias?
 
 **A)** Incorrect data types  
 **B)** Human annotators' prejudices in training labels  
@@ -274,7 +516,7 @@ Labels reflect human biases. Example: biased recruiters label resumes, model lea
 
 ---
 
-### Q23: What is demographic parity?
+### Q43: What is demographic parity?
 
 **A)** Model accuracy  
 **B)** Equal positive prediction rates across groups  
@@ -286,7 +528,7 @@ Fairness metric: each demographic group gets positive outcome at same rate. Exam
 
 ---
 
-### Q24: Which regulation requires "right to explanation"?
+### Q44: Which regulation requires "right to explanation"?
 
 **A)** HIPAA  
 **B)** GDPR  
@@ -298,9 +540,9 @@ GDPR (Europe) mandates users can request explanations for automated decisions af
 
 ---
 
-## Overfitting & Underfitting (Q25-28)
+## Overfitting & Underfitting (Q45-48)
 
-### Q25: What is overfitting?
+### Q45: What is overfitting?
 
 **A)** Model too simple  
 **B)** Model memorizes training data including noise  
@@ -312,7 +554,7 @@ Overfitting: excellent training accuracy (95%+), poor test accuracy (< 75%). Mod
 
 ---
 
-### Q26: What is underfitting?
+### Q46: What is underfitting?
 
 **A)** Model too complex  
 **B)** Model too simple to capture patterns  
@@ -324,7 +566,7 @@ Underfitting: poor training accuracy, poor test accuracy. Model lacks capacity t
 
 ---
 
-### Q27: How do you fix overfitting?
+### Q47: How do you fix overfitting?
 
 **A)** Train longer  
 **B)** Add more training data or regularization  
@@ -336,7 +578,7 @@ Solutions: more training data (best), regularization (L1/L2), simplify model, cr
 
 ---
 
-### Q28: What is regularization?
+### Q48: What is regularization?
 
 **A)** Making data uniform  
 **B)** Penalizing model complexity to prevent overfitting  
@@ -348,9 +590,9 @@ Regularization adds penalty for large weights/complexity. L1 (Lasso) forces some
 
 ---
 
-## AWS Services & Practical (Q29-30)
+## AWS Services & Practical (Q49-50)
 
-### Q29: Which service provides time-series forecasting?
+### Q49: Which service provides time-series forecasting?
 
 **A)** Amazon Forecast  
 **B)** Amazon Lex  
@@ -362,7 +604,7 @@ Forecast uses ML for time-series predictions: demand forecasting, inventory plan
 
 ---
 
-### Q30: What is Amazon Comprehend used for?
+### Q50: What is Amazon Comprehend used for?
 
 **A)** Image recognition  
 **B)** Natural language processing and text analysis  
@@ -374,9 +616,9 @@ Comprehend performs NLP: sentiment analysis, entity extraction, key phrase detec
 
 ---
 
-## Advanced ML Concepts (Q31-38)
+## Advanced ML Concepts (Q51-58)
 
-### Q31: What is transfer learning?
+### Q51: What is transfer learning?
 
 **A)** Moving models between servers  
 **B)** Using pre-trained models as starting point for new tasks  
@@ -388,7 +630,7 @@ Transfer learning: leverage knowledge from pre-trained model (e.g., ImageNet) fo
 
 ---
 
-### Q32: What is Amazon Personalize?
+### Q52: What is Amazon Personalize?
 
 **A)** User authentication service  
 **B)** ML service for real-time personalized recommendations  
@@ -400,7 +642,7 @@ Personalize creates recommendation systems (products, content, searches). Uses c
 
 ---
 
-### Q33: What is batch inference vs real-time inference?
+### Q53: What is batch inference vs real-time inference?
 
 **A)** Same thing  
 **B)** Batch processes many requests at once, real-time serves individual requests immediately  
@@ -412,7 +654,7 @@ Batch: process large datasets offline (e.g., daily customer scoring). Real-time:
 
 ---
 
-### Q34: What is Amazon Fraud Detector?
+### Q54: What is Amazon Fraud Detector?
 
 **A)** General anomaly detection  
 **B)** Managed service for fraud detection using ML  
@@ -424,7 +666,7 @@ Fraud Detector identifies suspicious activities: payment fraud, fake accounts, a
 
 ---
 
-### Q35: What is ensemble learning?
+### Q55: What is ensemble learning?
 
 **A)** Training one large model  
 **B)** Combining multiple models for better predictions  
@@ -436,7 +678,7 @@ Ensemble combines predictions from multiple models. Reduces overfitting, improve
 
 ---
 
-### Q36: What is cross-validation?
+### Q56: What is cross-validation?
 
 **A)** Testing on separate dataset  
 **B)** Splitting data into folds, training/testing on different combinations  
@@ -448,7 +690,7 @@ K-fold cross-validation: split data into K parts, train on K-1, test on 1, rotat
 
 ---
 
-### Q37: What is Amazon Textract?
+### Q57: What is Amazon Textract?
 
 **A)** Text generation service  
 **B)** Extract text and data from documents using ML  
@@ -460,7 +702,7 @@ Textract performs OCR on documents, forms, tables. Extracts structured data (key
 
 ---
 
-### Q38: What is the F1 score?
+### Q58: What is the F1 score?
 
 **A)** Training speed metric  
 **B)** Harmonic mean of precision and recall  
@@ -472,9 +714,9 @@ F1 = 2 × (precision × recall) / (precision + recall). Balances false positives
 
 ---
 
-## Model Training & Deployment (Q39-45)
+## Model Training & Deployment (Q59-65)
 
-### Q39: What are hyperparameters?
+### Q59: What are hyperparameters?
 
 **A)** Model outputs  
 **B)** Settings configured before training (learning rate, layers)  
@@ -486,7 +728,7 @@ Hyperparameters: learning rate, batch size, number of layers, regularization str
 
 ---
 
-### Q40: What is Amazon Polly?
+### Q60: What is Amazon Polly?
 
 **A)** Survey service  
 **B)** Text-to-speech service using deep learning  
@@ -498,7 +740,7 @@ Polly converts text to lifelike speech. Multiple voices, languages. Neural TTS f
 
 ---
 
-### Q41: What is A/B testing in ML?
+### Q61: What is A/B testing in ML?
 
 **A)** Testing two algorithms  
 **B)** Comparing model versions in production with real traffic  
@@ -510,7 +752,7 @@ A/B testing: route traffic to model A (champion) vs model B (challenger). Measur
 
 ---
 
-### Q42: What is Amazon Transcribe?
+### Q62: What is Amazon Transcribe?
 
 **A)** Code transcription  
 **B)** Speech-to-text service using ML  
@@ -522,7 +764,7 @@ Transcribe converts audio/video to text. Supports real-time and batch. Features:
 
 ---
 
-### Q43: What is feature scaling/normalization?
+### Q63: What is feature scaling/normalization?
 
 **A)** Adding more features  
 **B)** Transforming features to similar ranges  
@@ -534,7 +776,7 @@ Scaling: convert features to similar scale (e.g., 0-1 or mean=0, std=1). Prevent
 
 ---
 
-### Q44: What is Amazon Translate?
+### Q64: What is Amazon Translate?
 
 **A)** Code conversion  
 **B)** Neural machine translation service  
@@ -546,7 +788,7 @@ Translate provides real-time language translation. Supports 75+ languages. Uses 
 
 ---
 
-### Q45: What is early stopping?
+### Q65: What is early stopping?
 
 **A)** Canceling training  
 **B)** Stopping training when validation performance stops improving  
@@ -558,9 +800,9 @@ Early stopping: monitor validation loss during training, stop when it stops decr
 
 ---
 
-## Additional AWS Services (Q46-50)
+## Additional AWS Services (Q66-70)
 
-### Q46: What is Amazon SageMaker Autopilot?
+### Q66: What is Amazon SageMaker Autopilot?
 
 **A)** Automatic deployment  
 **B)** Automated ML (AutoML) for building models without code  
@@ -572,7 +814,7 @@ Autopilot automates ML workflow: data analysis, feature engineering, algorithm s
 
 ---
 
-### Q47: What is Amazon Augmented AI (A2I)?
+### Q67: What is Amazon Augmented AI (A2I)?
 
 **A)** AI training service  
 **B)** Human review workflows for ML predictions  
@@ -584,7 +826,7 @@ A2I adds human review to ML predictions. Route low-confidence predictions to hum
 
 ---
 
-### Q48: What is model monitoring in production?
+### Q68: What is model monitoring in production?
 
 **A)** Watching training progress  
 **B)** Tracking model performance, drift, data quality in production  
@@ -596,7 +838,7 @@ Monitor: prediction quality, latency, data drift, model drift. SageMaker Model M
 
 ---
 
-### Q49: What is Amazon Lookout for Vision?
+### Q69: What is Amazon Lookout for Vision?
 
 **A)** User authentication  
 **B)** Detect visual defects in manufacturing using computer vision  
@@ -608,7 +850,7 @@ Lookout for Vision identifies product defects, damage, irregularities in images.
 
 ---
 
-### Q50: What is gradient descent?
+### Q70: What is gradient descent?
 
 **A)** Data cleaning method  
 **B)** Optimization algorithm that updates model weights to minimize loss  
@@ -620,6 +862,490 @@ Gradient descent: iteratively adjust model weights in direction that reduces err
 
 ---
 
+## Task Statement 1.2: Practical Use Cases & Applications (Q71-90)
+
+### Q71: When does AI/ML provide the most value?
+
+**A)** Only for large enterprises  
+**B)** Automating repetitive tasks, scaling decisions, augmenting human judgment  
+**C)** Replacing all human workers
+
+**Answer: B**
+
+AI/ML value: automate high-volume repetitive tasks (classification, routing), scale decisions beyond human capacity (millions of transactions), augment expertise (medical diagnosis assistance), personalize at scale (recommendations).
+
+---
+
+### Q72: When is AI/ML NOT appropriate?
+
+**A)** Always appropriate for every problem  
+**C)** When deterministic outcomes required, cost exceeds benefit, insufficient data  
+**B)** Never appropriate
+
+**Answer: C**
+
+Avoid AI/ML when: need guaranteed specific outcome (safety-critical systems), development cost > business value, < 100 training examples, simple rules suffice, explainability legally required but not possible.
+
+---
+
+### Q73: What ML technique is used for predicting continuous numerical values?
+
+**A)** Classification  
+**B)** Regression  
+**C)** Clustering
+
+**Answer: B**
+
+Regression: predict numbers (house prices, sales revenue, temperature, customer lifetime value). Outputs continuous values. Algorithms: linear regression, XGBoost, neural networks. Example: forecasting demand.
+
+---
+
+### Q74: What ML technique is used for categorizing data into predefined classes?
+
+**A)** Regression  
+**C)** Classification  
+**B)** Clustering
+
+**Answer: C**
+
+Classification: assign labels/categories (spam/not spam, fraud/legitimate, product categories). Outputs discrete classes. Algorithms: logistic regression, decision trees, neural networks. Requires labeled training data.
+
+---
+
+### Q75: What ML technique groups similar data without predefined labels?
+
+**A)** Regression  
+**B)** Classification  
+**C)** Clustering
+
+**Answer: C**
+
+Clustering: discover natural groupings in data (customer segments, document topics, anomaly detection). Unsupervised learning. Algorithms: K-means, DBSCAN, hierarchical clustering. No labels needed.
+
+---
+
+### Q76: What is a real-world computer vision application?
+
+**A)** Sentiment analysis  
+**C)** Quality control defect detection in manufacturing  
+**B)** Speech recognition
+
+**Answer: C**
+
+CV applications: manufacturing defect detection (Lookout for Vision), medical image analysis (X-ray diagnosis), autonomous vehicles (object detection), retail (cashierless stores), security (facial recognition), content moderation.
+
+---
+
+### Q77: What is a real-world NLP application?
+
+**A)** Image classification  
+**B)** Document summarization and sentiment analysis  
+**C)** Video analysis
+
+**Answer: B**
+
+NLP applications: customer feedback sentiment analysis (Comprehend), document summarization, chatbots (Lex), email classification, contract analysis, language translation (Translate), entity extraction from text.
+
+---
+
+### Q78: What is a real-world speech recognition application?
+
+**A)** Image tagging  
+**C)** Medical transcription and call center analytics  
+**B)** Fraud detection
+
+**Answer: C**
+
+Speech recognition: medical dictation (Transcribe Medical), call center quality monitoring, meeting transcription, voice assistants, accessibility features (subtitles), IVR systems (Lex + Transcribe).
+
+---
+
+### Q79: What is a real-world recommendation system application?
+
+**A)** Fraud detection  
+**B)** Personalized product and content recommendations  
+**C)** Image recognition
+
+**Answer: B**
+
+Recommendations (Personalize): e-commerce product suggestions ("customers who bought X also bought Y"), streaming content (Netflix-style), news articles, job postings, ad targeting, email campaigns.
+
+---
+
+### Q80: What is a real-world fraud detection application?
+
+**A)** Product recommendations  
+**C)** Payment fraud and fake account detection  
+**B)** Language translation
+
+**Answer: C**
+
+Fraud detection: payment transaction screening (Fraud Detector), account takeover detection, fake review identification, insurance claim fraud, identity verification, bot detection on websites.
+
+---
+
+### Q81: What is a real-world forecasting application?
+
+**A)** Image classification  
+**B)** Demand forecasting and inventory planning  
+**C)** Text summarization
+
+**Answer: B**
+
+Forecasting (Forecast): retail demand prediction, inventory optimization, workforce planning, energy consumption forecasting, financial planning, website traffic prediction, resource allocation.
+
+---
+
+### Q82: How do you select the right ML technique?
+
+**A)** Always use neural networks  
+**C)** Match problem type: regression for numbers, classification for categories, clustering for grouping  
+**B)** Random selection
+
+**Answer: C**
+
+Selection criteria: regression (predict prices, revenue), classification (spam detection, diagnostics), clustering (segmentation), time-series (forecasting), NLP (text), CV (images), recommendations (personalization). Match data type and business goal.
+
+---
+
+### Q83: What AWS service capability does SageMaker provide?
+
+**A)** Only pre-trained models  
+**B)** Build, train, and deploy custom ML models  
+**C)** Only speech services
+
+**Answer: B**
+
+SageMaker: complete ML platform for custom models. Notebooks (development), built-in algorithms (XGBoost, k-means), training jobs (distributed), hyperparameter tuning, model deployment (endpoints), monitoring (Model Monitor).
+
+---
+
+### Q84: What AWS service capability does Transcribe provide?
+
+**A)** Image analysis  
+**C)** Automatic speech recognition (speech-to-text)  
+**B)** Text generation
+
+**Answer: C**
+
+Transcribe: convert audio/video to text. Real-time and batch. Features: speaker identification (diarization), custom vocabulary, timestamps, punctuation, medical/call analytics variants, PII redaction.
+
+---
+
+### Q85: What AWS service capability does Translate provide?
+
+**A)** Speech recognition  
+**B)** Neural machine translation between languages  
+**C)** Image translation
+
+**Answer: B**
+
+Translate: real-time text translation. 75+ languages, neural MT for fluency, batch translation, custom terminology (domain-specific), formality control, automatic language detection.
+
+---
+
+### Q86: What AWS service capability does Comprehend provide?
+
+**A)** Image recognition  
+**C)** NLP: sentiment, entities, key phrases, language detection  
+**B)** Video analysis
+
+**Answer: C**
+
+Comprehend: text analysis at scale. Sentiment analysis (positive/negative/neutral), entity extraction (people, places, dates), key phrase detection, language identification, topic modeling, PII detection, custom entity recognition.
+
+---
+
+### Q87: What AWS service capability does Lex provide?
+
+**A)** Image classification  
+**B)** Build conversational chatbots and voice interfaces  
+**C)** Data storage
+
+**Answer: B**
+
+Lex: conversational AI platform. Build chatbots (text/voice), automatic speech recognition (ASR), natural language understanding (NLU), intent recognition, slot filling, multi-turn conversations, integrates with Lambda.
+
+---
+
+### Q88: What AWS service capability does Polly provide?
+
+**A)** Speech-to-text  
+**C)** Text-to-speech with lifelike voices  
+**B)** Translation
+
+**Answer: C**
+
+Polly: convert text to natural speech. 60+ voices, 30+ languages, neural TTS (high quality), SSML support (pronunciation control), speech marks (lip-sync), real-time streaming.
+
+---
+
+### Q89: What use case matches Rekognition?
+
+**A)** Translating documents  
+**B)** Facial recognition and content moderation in images/videos  
+**C)** Time-series forecasting
+
+**Answer: B**
+
+Rekognition use cases: facial verification (access control), celebrity recognition, content moderation (inappropriate images), PPE detection (safety compliance), text in images (OCR), object/scene detection.
+
+---
+
+### Q90: What is the cost-benefit consideration for AI/ML?
+
+**A)** AI/ML always saves money  
+**C)** Development + infrastructure cost must be less than business value gained  
+**B)** Cost doesn't matter
+
+**Answer: C**
+
+Cost-benefit: calculate development cost (data labeling, engineering time) + operational cost (inference, infrastructure) vs business value (revenue increase, cost savings, efficiency gains). ROI must be positive. Start with pre-trained services for lower cost.
+
+---
+
+## Task Statement 1.3: ML Development Lifecycle & MLOps (Q91-110)
+
+### Q91: What is Exploratory Data Analysis (EDA)?
+
+**A)** Final model testing  
+**C)** Initial investigation to understand patterns, distributions, anomalies in data  
+**B)** Model deployment
+
+**Answer: C**
+
+EDA: visualize distributions, identify outliers, check correlations, understand data quality. Tools: histograms, scatter plots, summary statistics. Informs feature engineering. Use SageMaker Data Wrangler for visual EDA.
+
+---
+
+### Q92: What is data pre-processing in ML pipeline?
+
+**A)** After model training  
+**B)** Cleaning, transforming, normalizing data before training  
+**C)** Final deployment step
+
+**Answer: B**
+
+Pre-processing: handle missing values, remove duplicates, normalize/scale features, encode categorical variables, split train/validation/test sets. Critical for model quality. SageMaker Data Wrangler automates 300+ transformations.
+
+---
+
+### Q93: What AWS service helps with visual data preparation?
+
+**A)** Amazon Rekognition  
+**C)** Amazon SageMaker Data Wrangler  
+**B)** Amazon Comprehend
+
+**Answer: C**
+
+Data Wrangler: visual interface for data preparation. Import from S3/Redshift/Athena, apply 300+ built-in transformations, generate code automatically, get data quality insights. Reduces data prep time from weeks to minutes.
+
+---
+
+### Q94: What is SageMaker Feature Store used for?
+
+**A)** Model marketplace  
+**B)** Centralized repository for storing and managing ML features  
+**C)** Image storage
+
+**Answer: B**
+
+Feature Store: central location for feature definitions. Online store (low-latency inference), offline store (training). Ensures training-serving consistency, enables feature reuse across teams, supports time-travel queries.
+
+---
+
+### Q95: What is hyperparameter tuning?
+
+**A)** Data cleaning  
+**C)** Optimizing model configuration settings to improve performance  
+**B)** Feature selection
+
+**Answer: C**
+
+Hyperparameter tuning: systematically search for best learning rate, batch size, number of layers, regularization strength. SageMaker automatic tuning tries combinations, selects best based on validation metrics. Improves accuracy.
+
+---
+
+### Q96: What is the purpose of model evaluation?
+
+**A)** Deploy immediately  
+**B)** Assess performance using metrics before production deployment  
+**C)** Collect more data
+
+**Answer: B**
+
+Evaluation: test model on holdout test set. Measure metrics (accuracy, precision, recall, F1, AUC). Compare against baseline and business requirements. Decide if model ready for production. Critical quality gate.
+
+---
+
+### Q97: What is SageMaker Model Monitor used for?
+
+**A)** Training models  
+**C)** Continuous monitoring of deployed model quality and drift  
+**B)** Data labeling
+
+**Answer: C**
+
+Model Monitor: detects data drift (input distribution changes), model drift (accuracy degradation), bias drift, data quality issues. Automatic baseline creation, scheduled checks, CloudWatch alerts. Triggers retraining when needed.
+
+---
+
+### Q98: Where can you source ML models from?
+
+**A)** Only train from scratch  
+**C)** Open source pre-trained models, AWS model zoo, custom training, foundation models  
+**B)** Only AWS services
+
+**Answer: C**
+
+Model sources: pre-trained models (Hugging Face, TensorFlow Hub), AWS services (SageMaker JumpStart, Bedrock FMs), custom training (SageMaker), open source frameworks. Choose based on use case, data, customization needs.
+
+---
+
+### Q99: What is a managed API deployment method?
+
+**A)** Self-hosting on EC2  
+**B)** Fully managed inference endpoint via AWS service API  
+**C)** Manual server management
+
+**Answer: B**
+
+Managed API: AWS handles infrastructure (SageMaker endpoints, Bedrock API, AI services). Serverless, auto-scaling, pay-per-use. Benefits: no ops overhead, automatic updates, built-in monitoring. Example: Bedrock API calls.
+
+---
+
+### Q100: What is a self-hosted API deployment method?
+
+**A)** Only SageMaker endpoints  
+**C)** Deploy model on own infrastructure (EC2, ECS, Lambda) with custom API  
+**B)** Third-party hosting only
+
+**Answer: C**
+
+Self-hosted: deploy on EC2/ECS/EKS/Lambda, manage infrastructure, create custom API. Full control over environment, optimizations, costs. More operational overhead. Use when need specific configurations or on-premises deployment.
+
+---
+
+### Q101: What is MLOps?
+
+**A)** Manual ML workflows  
+**B)** Practices for automating and standardizing ML lifecycle operations  
+**C)** Only model training
+
+**Answer: B**
+
+MLOps: applying DevOps principles to ML. Automates: experimentation tracking, reproducible training, CI/CD pipelines, model versioning, monitoring, retraining. Goal: production-ready, scalable, maintainable ML systems. SageMaker Pipelines implements MLOps.
+
+---
+
+### Q102: What is the purpose of SageMaker Pipelines?
+
+**A)** Data storage  
+**C)** Orchestrate and automate end-to-end ML workflows  
+**B)** Only model training
+
+**Answer: C**
+
+Pipelines: define ML workflow as code (data prep → training → evaluation → deployment). Automates execution, tracks lineage, enables versioning, supports CI/CD. Ensures reproducibility and scalability. JSON or Python SDK.
+
+---
+
+### Q103: What is model versioning in MLOps?
+
+**A)** Naming models randomly  
+**B)** Tracking model versions with metadata for reproducibility  
+**C)** Deleting old models
+
+**Answer: B**
+
+Model versioning: track each model iteration with version number, training data, hyperparameters, metrics, approval status. SageMaker Model Registry manages versions. Enables rollback, comparison, governance, audit trails.
+
+---
+
+### Q104: What is technical debt in ML?
+
+**A)** Financial debt  
+**C)** Accumulated quick fixes and manual processes that hinder scalability  
+**B)** Model accuracy
+
+**Answer: C**
+
+Technical debt: shortcuts like hardcoded values, manual steps, lack of testing, no monitoring. Causes: time pressure, changing requirements. Mitigation: automation (Pipelines), testing, documentation, refactoring. MLOps reduces debt.
+
+---
+
+### Q105: What does production readiness mean for ML models?
+
+**A)** Model trained successfully  
+**C)** Model meets performance, scalability, monitoring, and governance requirements  
+**B)** High training accuracy only
+
+**Answer: C**
+
+Production readiness: model meets SLAs (latency, throughput), monitored for drift, has rollback plan, documented, tested, secure, compliant. Includes: endpoint auto-scaling, logging, alerting, A/B testing capability.
+
+---
+
+### Q106: What is AUC (Area Under ROC Curve)?
+
+**A)** Training speed metric  
+**B)** Measures classification model's ability to distinguish between classes  
+**C)** Loss function
+
+**Answer: B**
+
+AUC: plots true positive rate vs false positive rate. Range: 0-1 (1 = perfect, 0.5 = random). Good for imbalanced classes. Higher = better discrimination. Common threshold: AUC > 0.7 acceptable, > 0.8 good.
+
+---
+
+### Q107: What business metric evaluates ML model ROI?
+
+**A)** Only accuracy  
+**C)** Revenue increase, cost savings, customer satisfaction improvement  
+**B)** Training time
+
+**Answer: C**
+
+Business metrics: revenue impact (sales lift), cost reduction (automation savings), customer metrics (retention, satisfaction, NPS), efficiency gains (time saved). Compare model benefit vs development/operational cost. ROI = (Benefit - Cost) / Cost.
+
+---
+
+### Q108: What is model re-training?
+
+**A)** Initial training  
+**B)** Updating model with new data to maintain accuracy over time  
+**C)** Hyperparameter tuning
+
+**Answer: B**
+
+Re-training: periodically train on fresh data when performance degrades (drift detected) or new patterns emerge. Schedule: monthly, quarterly, or trigger-based (monitoring alerts). Automated via SageMaker Pipelines.
+
+---
+
+### Q109: What is experimentation in MLOps?
+
+**A)** Random testing  
+**C)** Systematic tracking of model experiments with parameters and results  
+**B)** Final deployment
+
+**Answer: C**
+
+Experimentation: track every training run with hyperparameters, data versions, metrics. Compare experiments to find best model. SageMaker Experiments automatically logs runs. Enables reproducibility and knowledge sharing.
+
+---
+
+### Q110: What is the purpose of SageMaker Model Registry?
+
+**A)** Store training data  
+**B)** Version control and governance for ML models  
+**C)** Feature engineering
+
+**Answer: B**
+
+Model Registry: catalog of model versions with metadata (metrics, approval status, lineage). Supports approval workflows (dev → staging → production), audit trails, rollback. Central governance for model lifecycle management.
+
+---
+
 ## Exam Tips
 
 **Key Concepts to Remember:**
@@ -627,17 +1353,70 @@ Gradient descent: iteratively adjust model weights in direction that reduces err
 1. **AI Hierarchy:** AI (broadest) → ML (learns from data) → Deep Learning (neural networks)
 2. **Learning Types:** Supervised (labeled), Unsupervised (patterns), Reinforcement (rewards)
 3. **ML Lifecycle:** Problem definition → Data prep (80% effort) → Training → Evaluation → Deployment → Monitoring → Retraining
-4. **AWS Core Services:**
+4. **ML Pipeline Components:**
+   - **Data Collection:** Gather training data
+   - **EDA:** Understand patterns, distributions, anomalies
+   - **Pre-processing:** Clean, transform, normalize (Data Wrangler)
+   - **Feature Engineering:** Create meaningful variables (Feature Store)
+   - **Model Training:** Learn patterns from data
+   - **Hyperparameter Tuning:** Optimize model settings
+   - **Evaluation:** Test performance (accuracy, AUC, F1)
+   - **Deployment:** Serve predictions (managed or self-hosted API)
+   - **Monitoring:** Track drift, quality (Model Monitor)
+   - **Re-training:** Update with new data
+5. **AWS Core Services:**
    - **SageMaker:** Build/train/deploy custom models
+   - **Data Wrangler:** Visual data preparation
+   - **Feature Store:** Centralized feature management
+   - **Pipelines:** ML workflow automation (MLOps)
+   - **Model Monitor:** Drift detection
+   - **Model Registry:** Version control, governance
    - **Rekognition:** Images/video
    - **Comprehend:** Text/NLP
    - **Lex:** Chatbots
    - **Forecast:** Time-series
    - **Polly:** Text-to-speech
-5. **Bias Types:** Data collection, algorithmic, label, measurement, aggregation
-6. **Fairness:** SageMaker Clarify, demographic parity, GDPR compliance
-7. **Overfitting vs Underfitting:** Train-test gap indicates overfitting, both poor = underfitting
-8. **Metrics:** Accuracy (overall), Precision (false alarms), Recall (missed cases), F1 (balance)
+   - **Transcribe:** Speech-to-text
+   - **Translate:** Language translation
+6. **Model Sources:**
+   - Open source pre-trained (Hugging Face, TensorFlow Hub)
+   - AWS (SageMaker JumpStart, Bedrock)
+   - Custom training (SageMaker)
+7. **Deployment Methods:**
+   - **Managed API:** SageMaker endpoints, Bedrock, AI services (serverless, auto-scaling)
+   - **Self-hosted:** EC2, ECS, Lambda (full control, more ops)
+8. **MLOps Fundamentals:**
+   - **Experimentation:** Track runs, parameters, metrics
+   - **Reproducibility:** Versioning, pipelines, lineage
+   - **Scalability:** Automated workflows, distributed training
+   - **Technical Debt:** Avoid manual processes, automate testing
+   - **Production Readiness:** Performance SLAs, monitoring, rollback
+   - **Model Re-training:** Scheduled or triggered by drift
+9. **Bias Types:** Data collection, algorithmic, label, measurement, aggregation
+10. **Fairness:** SageMaker Clarify, demographic parity, GDPR compliance
+11. **Overfitting vs Underfitting:** Train-test gap indicates overfitting, both poor = underfitting
+12. **Performance Metrics:**
+    - **Accuracy:** Overall correctness
+    - **Precision:** False alarm rate
+    - **Recall:** Missed cases
+    - **F1:** Balance precision/recall
+    - **AUC:** Classification discrimination ability (0.8+ good)
+13. **Business Metrics:**
+    - **ROI:** (Benefit - Cost) / Cost
+    - **Revenue:** Sales lift, customer value
+    - **Cost:** Savings from automation
+    - **Customer:** Satisfaction, retention, NPS
+14. **ML Techniques:**
+    - **Regression:** Predict numbers (prices, revenue)
+    - **Classification:** Categorize (spam, fraud)
+    - **Clustering:** Group similar items (segmentation)
+15. **Real-World Applications:**
+    - **CV:** Manufacturing defects, medical imaging, security
+    - **NLP:** Sentiment analysis, summarization, chatbots
+    - **Speech:** Transcription, call analytics, voice assistants
+    - **Recommendations:** Products, content, personalization
+    - **Fraud:** Payment screening, account security
+    - **Forecasting:** Demand, inventory, resource planning
 
 **Study Focus:**
 
@@ -645,4 +1424,11 @@ Gradient descent: iteratively adjust model weights in direction that reduces err
 - Identify overfitting/underfitting from scenarios
 - Recognize bias types
 - Understand when to use supervised vs unsupervised
-- Know ML lifecycle phases
+- Know ML lifecycle phases and pipeline components
+- Select appropriate ML technique (regression/classification/clustering)
+- Recognize when AI/ML is NOT appropriate
+- Map real-world applications to AWS services
+- Understand MLOps concepts (versioning, pipelines, monitoring)
+- Know AWS services for each pipeline stage (Data Wrangler, Feature Store, Pipelines, Model Monitor, Model Registry)
+- Distinguish managed vs self-hosted deployment
+- Understand performance metrics (accuracy, AUC, F1) and business metrics (ROI, cost, revenue)

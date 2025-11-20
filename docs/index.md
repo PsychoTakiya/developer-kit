@@ -18,10 +18,12 @@ This study guide is designed to help you prepare for the AWS Certified AI Practi
 ## Study Materials
 
 ### Overview
+
 - [Comprehensive Overview](/aws-ai-practitioner/overview) - Complete introduction to AWS AI/ML
 - [Overview MCQs](/aws-ai-practitioner/overview-mcq) - 50 practice questions covering overview concepts
 
 ### Exam Domains
+
 1. [Domain 1: Fundamentals of AI and ML](/aws-ai-practitioner/domain-1-fundamentals) - Core concepts and terminology
 2. [Domain 2: Fundamentals of Generative AI](/aws-ai-practitioner/domain-2-generative-ai) - LLMs, transformers, and foundation models
 3. [Domain 3: Applications of Foundation Models](/aws-ai-practitioner/domain-3-applications) - Practical use cases and implementation
@@ -29,6 +31,7 @@ This study guide is designed to help you prepare for the AWS Certified AI Practi
 5. [Domain 5: Security, Compliance & Governance](/aws-ai-practitioner/domain-5-security-compliance) - Security frameworks and compliance
 
 ### AWS AI/ML Services
+
 - [AWS AI/ML Services Guide](/aws-ai-practitioner/aws-services) - Comprehensive coverage of SageMaker, Bedrock, and other services
 
 ## How to Use This Guide
