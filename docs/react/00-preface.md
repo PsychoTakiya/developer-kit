@@ -26,3 +26,9 @@ Each chapter follows a consistent pattern:
 ## Source Materials
 
 Derived from: `REACT_MASTERY_GUIDE.md`, `Hooks_Deep_Dive.md`, `STATE_MANAGEMENT.md`, `DESIGN_PATTERNS.md`, `REDUX_TOOLKIT.md`, `TANSTACK_QUERY.md`, and other repository examples.
+
+## How to Revise
+
+- Chapters 11–17 open each question with a **30-second answer**: the version you'd say out loud in an interview. Read those first; the detail underneath is for follow-ups.
+- The [Night-Before Sheet](./16-interview-cheatsheet) has a one-page summary and self-test flashcards for the whole React section.
+- Log weak topics in the [revision tracker](/start-here/revision-tracker).
