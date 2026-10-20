@@ -32,7 +32,7 @@ A: If a synchronous exception is thrown inside a route handler, Express will cat
 
 Q: How should you handle asynchronous errors (promises / async functions) in Express routes?
 
-A: Historically, you needed to call `next(err)` in a .catch() or wrap code in try/catch and call next(err). Modern Express (v5 in alpha) has better async handling, but in common Express 4 apps you should either:
+A: Historically, you needed to call `next(err)` in a .catch() or wrap code in try/catch and call next(err). Express 5 (stable since late 2024) forwards rejected promises from async handlers to the error middleware automatically. In Express 4 apps you should either:
 
 - Use a lightweight wrapper that catches rejected promises and forwards them to next: `const wrap = fn => (req,res,next) => Promise.resolve(fn(req,res,next)).catch(next)`.
 - Use libraries (express-async-errors) that patch Express to handle rejected promises.
