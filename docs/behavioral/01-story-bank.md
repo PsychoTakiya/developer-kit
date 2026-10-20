@@ -93,7 +93,7 @@ Copy this block for each slot and fill it in. Keep each one to bullet points, no
   - "How did you measure that?"
 ```
 
-## Question → story map
+## Question to story map
 
 When a question comes up, decide which story fits within a few seconds. Fill in the right-hand column with your story titles.
 

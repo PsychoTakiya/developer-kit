@@ -14,25 +14,48 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'React', link: '/react/00-preface' },
-      { text: 'Node & Express', link: '/node-express/00-node-express-preface' },
-      { text: 'Core Concepts', link: '/core-concepts/01-scalability' },
-      { text: 'AWS AI', link: '/aws-ai-practitioner/' },
+      { text: 'Study Plan', link: '/start-here/study-plan' },
+      { text: 'Quick Revision', link: '/start-here/quick-revision' },
       {
-        text: 'Cheat Sheets',
+        text: 'Topics',
         items: [
-          { text: 'React', link: '/react/16-interview-cheatsheet' },
-          {
-            text: 'Node & Express',
-            link: '/node-express/12-node-express-cheatsheet'
-          }
+          { text: 'JavaScript & TypeScript', link: '/javascript/01-core-language' },
+          { text: 'React', link: '/react/00-preface' },
+          { text: 'Node & Express', link: '/node-express/00-node-express-preface' },
+          { text: 'System Design', link: '/system-design/00-interview-framework' },
+          { text: 'DSA', link: '/dsa/01-patterns' },
+          { text: 'Databases & SQL', link: '/databases/01-sql-fundamentals' },
+          { text: 'Web Fundamentals', link: '/web-fundamentals/01-http-networking' },
+          { text: 'Behavioral & Career', link: '/behavioral/01-story-bank' },
+          { text: 'Core Concepts', link: '/core-concepts/01-scalability' },
+          { text: 'AWS AI Practitioner', link: '/aws-ai-practitioner/' }
         ]
       }
     ],
     sidebar: [
       {
-        text: 'React',
+        text: 'Start Here',
         collapsed: false,
+        items: [
+          { text: '8-Week Study Plan', link: '/start-here/study-plan' },
+          { text: 'Quick Revision Hub', link: '/start-here/quick-revision' },
+          { text: 'Revision Tracker', link: '/start-here/revision-tracker' }
+        ]
+      },
+      {
+        text: 'JavaScript & TypeScript',
+        collapsed: true,
+        items: [
+          { text: 'Core Language', link: '/javascript/01-core-language' },
+          { text: 'Async & Event Loop', link: '/javascript/02-async-event-loop' },
+          { text: 'Implement It Yourself', link: '/javascript/03-implement-yourself' },
+          { text: 'TypeScript Essentials', link: '/javascript/04-typescript' },
+          { text: 'Flashcards', link: '/javascript/flashcards' }
+        ]
+      },
+      {
+        text: 'React',
+        collapsed: true,
         items: [
           { text: 'Preface', link: '/react/00-preface' },
           { text: 'Core Foundations', link: '/react/01-core-react-foundations' },
@@ -87,7 +110,7 @@ export default defineConfig({
             link: '/react/15-anti-patterns-refactoring'
           },
           {
-            text: 'Interview Cheat Sheet',
+            text: 'Night-Before Sheet & Flashcards',
             link: '/react/16-interview-cheatsheet'
           },
           { text: 'Recipes & Utilities', link: '/react/17-recipes-utilities' },
@@ -154,7 +177,7 @@ export default defineConfig({
           },
           { text: 'Advanced Topics', link: '/node-express/11-advanced-topics' },
           {
-            text: 'Interview Cheat Sheet',
+            text: 'Night-Before Sheet & Flashcards',
             link: '/node-express/12-node-express-cheatsheet'
           },
           { text: 'Redis Caching', link: '/node-express/13-redis-caching' },
@@ -166,6 +189,27 @@ export default defineConfig({
             text: 'Express Middleware Flow',
             link: '/node-express/15-express-middleware-flow'
           }
+        ]
+      },
+      {
+        text: 'System Design',
+        collapsed: true,
+        items: [
+          { text: 'Interview Framework', link: '/system-design/00-interview-framework' },
+          { text: 'Data Storage & Consistency', link: '/system-design/01-data-storage' },
+          { text: 'Caching & CDN', link: '/system-design/02-caching-cdn' },
+          { text: 'Messaging & Async', link: '/system-design/03-messaging-async' },
+          {
+            text: 'API Design & Rate Limiting',
+            link: '/system-design/04-api-design-rate-limiting'
+          },
+          { text: 'Auth & Security', link: '/system-design/05-auth-security' },
+          { text: 'Case Studies', link: '/system-design/06-case-studies' },
+          {
+            text: 'Frontend System Design',
+            link: '/system-design/07-frontend-system-design'
+          },
+          { text: 'Flashcards', link: '/system-design/flashcards' }
         ]
       },
       {
@@ -181,6 +225,53 @@ export default defineConfig({
             text: 'Microservices vs Monolith',
             link: '/core-concepts/03-microservices-vs-monolith'
           }
+        ]
+      },
+      {
+        text: 'DSA',
+        collapsed: true,
+        items: [
+          { text: 'Patterns & Templates', link: '/dsa/01-patterns' },
+          { text: 'JS Toolkit', link: '/dsa/02-js-toolkit' },
+          { text: 'Problem Tracker', link: '/dsa/03-problem-tracker' },
+          { text: 'Pattern Flashcards', link: '/dsa/flashcards' }
+        ]
+      },
+      {
+        text: 'Databases & SQL',
+        collapsed: true,
+        items: [
+          { text: 'SQL & DB Fundamentals', link: '/databases/01-sql-fundamentals' },
+          { text: 'SQL Exercises', link: '/databases/02-sql-exercises' },
+          { text: 'Flashcards', link: '/databases/flashcards' }
+        ]
+      },
+      {
+        text: 'Web Fundamentals',
+        collapsed: true,
+        items: [
+          { text: 'HTTP & Networking', link: '/web-fundamentals/01-http-networking' },
+          {
+            text: 'Browser, Performance & Security',
+            link: '/web-fundamentals/02-browser-performance'
+          },
+          { text: 'Flashcards', link: '/web-fundamentals/flashcards' }
+        ]
+      },
+      {
+        text: 'Behavioral & Career',
+        collapsed: true,
+        items: [
+          { text: 'STAR Story Bank', link: '/behavioral/01-story-bank' },
+          {
+            text: 'Intro & Project Deep Dive',
+            link: '/behavioral/02-intro-and-project-deep-dive'
+          },
+          {
+            text: 'Senior Signals & Offers',
+            link: '/behavioral/03-senior-signals-and-offers'
+          },
+          { text: 'Job Search & Trackers', link: '/behavioral/04-job-search-tracker' }
         ]
       },
       {

@@ -4,7 +4,7 @@ title: Intro & Project Deep Dive
 
 # 2. "Tell Me About Yourself" & Project Deep Dive
 
-## "Tell me about yourself" (60–90 seconds)
+## "Tell me about yourself" (60 to 90 seconds)
 
 This answer sets the tone for the whole interview. It's not your life story; it's a **pitch for why you fit this role**. Structure: **present → past → why this role**.
 

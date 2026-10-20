@@ -4,36 +4,29 @@ A comprehensive engineering knowledge hub covering React, Node.js, Express, Soft
 
 ## 📚 What's Inside
 
-### ⚛️ React Development
+An interview preparation and quick-revision kit for SWE II / Senior full-stack JavaScript roles.
 
-- Core foundations and rendering mechanisms
-- Hooks fundamentals and advanced patterns
-- State management (Redux Toolkit, TanStack Query, Context)
-- Performance optimization and profiling
-- Testing, accessibility, and security
-- React 19 features and best practices
+| Section | What you get |
+|---|---|
+| 🧭 **Start Here** | 8-week study plan, spaced-repetition revision tracker, quick-revision hub |
+| 🟨 **JavaScript & TypeScript** | Core language, event loop output puzzles, utilities to implement from scratch (tested), TypeScript |
+| ⚛️ **React** | Rendering, hooks, state, performance, testing, accessibility, SSR/RSC, night-before sheet |
+| 🚀 **Node & Express** | Event loop, streams, Express, security, profiling, architecture, scaling, night-before sheet |
+| 🏗️ **System Design** | Interview framework, storage, caching, messaging, APIs, auth, 5 case studies, frontend system design |
+| 🧮 **DSA** | 15 patterns with tested JS templates, JS toolkit, 81-problem spaced-repetition tracker |
+| 🗄️ **Databases & SQL** | SQL fundamentals, indexes, transactions, 14 exercises verified against SQLite |
+| 🌐 **Web Fundamentals** | HTTP, TLS, CORS, caching, rendering, Core Web Vitals, web security |
+| 🗣️ **Behavioral & Career** | STAR story bank, intro pitch, project deep dive, senior signals, negotiation, job search trackers |
+| 💡 **Q&A Deep Dives** | Long-form React, hooks, state management and design pattern Q&A |
+| 📐 **Core Concepts** | Scalability, high availability, microservices vs monolith |
+| ☁️ **AWS AI Practitioner** | Exam domains with MCQs |
 
-### 🚀 Node.js & Express
+### Built for fast recall
 
-- Runtime foundations and event loop
-- Async patterns and concurrency
-- Express routing and middleware
-- Security hardening
-- Performance profiling
-- Deployment and scaling strategies
-
-### 🏗️ Core Concepts
-
-- Scalability patterns
-- High availability and fault tolerance
-- Microservices vs Monolith architecture
-
-### 💡 Q&A Deep Dives
-
-- Design patterns
-- Hooks mastery
-- State management strategies
-- And more...
+- **30-second answers** at the top of each Q&A: what you'd actually say in an interview.
+- **Flashcard decks** for every area (VitePress `::: details` blocks): answer out loud, then reveal.
+- **Night-before sheets** for React and Node.
+- **Trackers** for topics, DSA problems, applications and mock interviews.
 
 ## Getting Started
 
@@ -60,17 +53,30 @@ The documentation site is built with [VitePress](https://vitepress.dev/). All do
 ```
 docs/
 ├── .vitepress/
-│   └── config.ts          # VitePress configuration
+│   └── config.ts          # VitePress configuration (nav, sidebar, search)
 ├── index.md               # Home page
-├── react/                 # React documentation
-├── node-express/          # Node.js & Express guides
-├── core-concepts/         # Architecture & design
-└── qna/                   # Deep dive Q&As
+├── start-here/            # Study plan, revision tracker, quick-revision hub
+├── javascript/            # JS & TypeScript
+├── react/                 # React chapters + night-before sheet
+├── qna/                   # React deep-dive Q&As
+├── node-express/          # Node.js & Express
+├── system-design/         # Framework, building blocks, case studies
+├── core-concepts/         # Scalability, availability, architecture
+├── dsa/                   # Patterns, toolkit, problem tracker
+├── databases/             # SQL & database fundamentals
+├── web-fundamentals/      # HTTP, browser, performance, security
+├── behavioral/            # Stories, intro, career, job search
+└── aws-ai-practitioner/   # AWS AI Practitioner study guide
 ```
 
 ### Adding Content
 
 Create new markdown files in the appropriate directory and update the sidebar in `docs/.vitepress/config.ts`.
+
+Conventions:
+
+- Start each Q&A with a `::: tip 30-second answer` box, then the detail.
+- Write flashcards as `::: details Question` blocks with a short spoken-style answer.
 
 ## Features
 
