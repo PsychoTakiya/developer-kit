@@ -6,6 +6,8 @@ title: JS & TS Flashcards
 
 **How to use:** read the question, say your answer out loud, *then* open the card. Mark any card you missed and revisit it in 2 days. Answers are written as what you'd actually say in an interview.
 
+<DeckToolbar />
+
 ## Language
 
 ::: details What is a closure?

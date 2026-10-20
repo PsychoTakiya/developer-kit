@@ -6,6 +6,8 @@ title: 8-Week Study Plan
 
 Built for a full-stack JavaScript engineer with about 3.5 years of experience targeting **SWE II / Senior** roles, studying around **10–12 hours a week** alongside a full-time job. Compress it to 4–5 weeks if you have interviews soon. Do weeks 1–2 regardless, because they unlock everything else.
 
+Tick tasks off as you go: checkboxes are saved in this browser, and [My Progress](./progress) shows how far through each week you are.
+
 ## What each interview round needs
 
 | Round | Kit section | Weight for SWE II / Senior |
@@ -19,7 +21,7 @@ Built for a full-stack JavaScript engineer with about 3.5 years of experience ta
 
 ## Daily rhythm (about 1.5–2 hours on weekdays)
 
-1. **15 min, flashcards:** one deck, out loud. Mark misses in the [revision tracker](./revision-tracker).
+1. **15 min, flashcards:** a [review session](./review) of the cards due today, answered out loud. The kit schedules each card's next review from your rating.
 2. **45–60 min, DSA:** one new problem from the tracker plus any redos due today.
 3. **30–45 min, the week's topic:** read, then close the page and explain it out loud or on paper.
 

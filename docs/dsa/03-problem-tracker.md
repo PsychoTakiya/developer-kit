@@ -6,9 +6,9 @@ title: DSA Problem Tracker
 
 **How to use this page**
 
-1. Edit this file in your fork (or copy the table to a spreadsheet).
-2. When you solve a problem, write the date in **Solved** and a one-line **Key insight** (the trick you'd forget).
-3. Redo it from scratch after **3 days**, **7 days** and **21 days**. Write ✅ if you solved it in under 25 minutes without hints, ❌ otherwise. A ❌ resets the schedule.
+1. The tables are editable on the site. Entries are saved in this browser; back them up from [My Progress](/start-here/progress), which also lists the redos due today.
+2. When you solve a problem, set the **Solved** date and write a one-line **Key insight** (the trick you'd forget).
+3. Redo it from scratch after **3 days**, **7 days** and **21 days**. The redo columns show their due dates, and rows with a redo due are highlighted. Mark ✅ if you solved it in under 25 minutes without hints, ❌ otherwise. After a ❌, set **Solved** to today to restart the schedule.
 4. A problem is "done" after three ✅ in a row.
 
 Target pace while job hunting: **1–2 new problems a day plus redos**. Quality of recall beats volume.
@@ -16,6 +16,8 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 **Legend:** E = easy, M = medium, H = hard.
 
 ## Arrays & hashing
+
+<TrackerTable id="dsa-arrays-hashing">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -27,7 +29,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 238 | Product of Array Except Self | M | | | | | |
 | 128 | Longest Consecutive Sequence | M | | | | | |
 
+</TrackerTable>
+
 ## Two pointers
+
+<TrackerTable id="dsa-two-pointers">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -37,7 +43,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 11 | Container With Most Water | M | | | | | |
 | 42 | Trapping Rain Water | H | | | | | |
 
+</TrackerTable>
+
 ## Sliding window
+
+<TrackerTable id="dsa-sliding-window">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -47,7 +57,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 567 | Permutation in String | M | | | | | |
 | 76 | Minimum Window Substring | H | | | | | |
 
+</TrackerTable>
+
 ## Prefix sum
+
+<TrackerTable id="dsa-prefix-sum">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -55,7 +69,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 560 | Subarray Sum Equals K | M | | | | | |
 | 525 | Contiguous Array | M | | | | | |
 
+</TrackerTable>
+
 ## Stack
+
+<TrackerTable id="dsa-stack">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -65,7 +83,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 739 | Daily Temperatures | M | | | | | |
 | 84 | Largest Rectangle in Histogram | H | | | | | |
 
+</TrackerTable>
+
 ## Binary search
+
+<TrackerTable id="dsa-binary-search">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -76,7 +98,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 33 | Search in Rotated Sorted Array | M | | | | | |
 | 1011 | Capacity To Ship Packages Within D Days | M | | | | | |
 
+</TrackerTable>
+
 ## Linked list
+
+<TrackerTable id="dsa-linked-list">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -88,7 +114,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 146 | LRU Cache | M | | | | | |
 | 23 | Merge k Sorted Lists | H | | | | | |
 
+</TrackerTable>
+
 ## Trees
+
+<TrackerTable id="dsa-trees">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -105,7 +135,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 124 | Binary Tree Maximum Path Sum | H | | | | | |
 | 297 | Serialize and Deserialize Binary Tree | H | | | | | |
 
+</TrackerTable>
+
 ## Heap & tries
+
+<TrackerTable id="dsa-heap-tries">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -116,7 +150,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 208 | Implement Trie | M | | | | | |
 | 211 | Design Add and Search Words | M | | | | | |
 
+</TrackerTable>
+
 ## Backtracking
+
+<TrackerTable id="dsa-backtracking">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -126,7 +164,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 22 | Generate Parentheses | M | | | | | |
 | 79 | Word Search | M | | | | | |
 
+</TrackerTable>
+
 ## Graphs
+
+<TrackerTable id="dsa-graphs">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -139,7 +181,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 743 | Network Delay Time | M | | | | | |
 | 127 | Word Ladder | H | | | | | |
 
+</TrackerTable>
+
 ## Intervals
+
+<TrackerTable id="dsa-intervals">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -147,7 +193,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 57 | Insert Interval | M | | | | | |
 | 435 | Non-overlapping Intervals | M | | | | | |
 
+</TrackerTable>
+
 ## Dynamic programming
+
+<TrackerTable id="dsa-dynamic-programming">
 
 | # | Problem | Lvl | Solved | +3d | +7d | +21d | Key insight |
 |---|---|---|---|---|---|---|---|
@@ -161,7 +211,11 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 416 | Partition Equal Subset Sum | M | | | | | |
 | 72 | Edit Distance | M | | | | | |
 
+</TrackerTable>
+
 ## Weekly summary
+
+<TrackerTable id="dsa-weekly-summary">
 
 | Week | New solved | Redos ✅ | Redos ❌ | Weakest pattern | Focus next week |
 |---|---|---|---|---|---|
@@ -171,3 +225,5 @@ Target pace while job hunting: **1–2 new problems a day plus redos**. Quality 
 | 4 | | | | | |
 | 5 | | | | | |
 | 6 | | | | | |
+
+</TrackerTable>

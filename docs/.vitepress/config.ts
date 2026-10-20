@@ -1,9 +1,15 @@
 import { defineConfig } from 'vitepress';
+import { progressPlugin } from './markdown/progress-plugin';
 
 export default defineConfig({
   title: 'Knowledge Hub: Developer Kit',
   description: 'A comprehensive engineering book (Foundations to Advanced)',
   lastUpdated: true,
+  markdown: {
+    config(md) {
+      md.use(progressPlugin);
+    }
+  },
   themeConfig: {
     search: {
       provider: 'local'
@@ -15,6 +21,8 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Study Plan', link: '/start-here/study-plan' },
+      { text: 'Review', link: '/start-here/review' },
+      { text: 'My Progress', link: '/start-here/progress' },
       { text: 'Quick Revision', link: '/start-here/quick-revision' },
       {
         text: 'Topics',
@@ -38,6 +46,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '8-Week Study Plan', link: '/start-here/study-plan' },
+          { text: 'Flashcard Review', link: '/start-here/review' },
+          { text: 'My Progress', link: '/start-here/progress' },
           { text: 'Quick Revision Hub', link: '/start-here/quick-revision' },
           { text: 'Revision Tracker', link: '/start-here/revision-tracker' }
         ]

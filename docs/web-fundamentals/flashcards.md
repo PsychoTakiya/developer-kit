@@ -6,6 +6,8 @@ title: Web Fundamentals Flashcards
 
 Say the answer out loud before opening each card.
 
+<DeckToolbar />
+
 ## Networking & HTTP
 
 ::: details URL → page in five steps?

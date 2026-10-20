@@ -6,7 +6,7 @@ title: Quick Revision Hub
 
 Every flashcard deck and night-before sheet in one place. Use these for daily 15-minute reviews and the evening before an interview.
 
-**How to use a deck:** read the question, answer **out loud**, then open the card. If you missed it, note the topic in the [revision tracker](./revision-tracker) and read the linked chapter.
+**How to use a deck:** read the question, answer **out loud**, then open the card and rate yourself (Missed, Shaky or Knew it). The kit schedules each card's next review from your rating. For one card at a time across all decks, use [Flashcard Review](./review); to see what's due, open [My Progress](./progress).
 
 ## Flashcard decks
 

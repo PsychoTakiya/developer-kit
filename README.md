@@ -24,9 +24,20 @@ An interview preparation and quick-revision kit for SWE II / Senior full-stack J
 ### Built for fast recall
 
 - **30-second answers** at the top of each Q&A: what you'd actually say in an interview.
-- **Flashcard decks** for every area (VitePress `::: details` blocks): answer out loud, then reveal.
+- **Flashcards** for every area: answer out loud, reveal, then rate yourself (Missed / Shaky / Knew it). Ratings schedule each card's next review (spaced repetition).
+- **Flashcard Review** page: one card at a time across decks, with keyboard shortcuts (`Space` to reveal, `1`–`3` to rate).
+- **Editable trackers** for revision topics, DSA problems, applications and mock interviews, plus clickable study-plan checklists.
+- **My Progress** dashboard: cards due, topics and DSA redos due, study plan completion, applications, and export/import/reset.
 - **Night-before sheets** for React and Node.
-- **Trackers** for topics, DSA problems, applications and mock interviews.
+
+Progress is stored in the browser's `localStorage` (no backend, no account). Use **Export progress** to back it up or move it to another device.
+
+### How the interactive parts work
+
+- `docs/.vitepress/markdown/progress-plugin.ts` gives every `::: details` card and `- [ ]` item a stable ID and renders them as `<Flashcard>` / `<TaskCheck>` components.
+- Wrap a markdown table in `<TrackerTable id="unique-id">` (blank lines around the table) to make its empty cells editable; add `addable` to allow extra rows. Column editors are chosen from the header (dates, confidence 1–5, ✅/❌, stage).
+- `docs/.vitepress/theme/kit.data.ts` and `cards.data.ts` index cards, checklists and trackers at build time.
+- IDs come from the page path plus the card title (or checklist text), so renaming a card or moving a page resets its saved progress.
 
 ## Getting Started
 

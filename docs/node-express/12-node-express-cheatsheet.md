@@ -6,6 +6,8 @@ title: Node & Express Night-Before Sheet
 
 **Use this page the evening before an interview.** Part 1 is a one-page summary; Part 2 is flashcards. Say each answer out loud, then open the card.
 
+<DeckToolbar />
+
 ## Part 1: one-page summary
 
 **Runtime:** single JS thread + libuv. Network I/O is OS-async; fs, DNS lookup, crypto and zlib use the 4-thread pool. Great for I/O-bound work; CPU-bound work needs worker threads or another service.

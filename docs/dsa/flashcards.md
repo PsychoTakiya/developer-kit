@@ -6,6 +6,8 @@ title: DSA Flashcards
 
 The hardest part of a coding round is spotting the pattern in the first five minutes. Each card gives a problem statement; name the **pattern** and the **complexity** before opening it.
 
+<DeckToolbar />
+
 ::: details "Find the length of the longest substring with at most K distinct characters."
 Sliding window with a frequency map; shrink while distinct > K. O(n) time.
 :::

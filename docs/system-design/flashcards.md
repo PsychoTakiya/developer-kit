@@ -6,6 +6,8 @@ title: System Design Flashcards
 
 Say the answer out loud before opening each card. These cover this section and the [Core Concepts](/core-concepts/01-scalability) pages.
 
+<DeckToolbar />
+
 ## Framework & estimation
 
 ::: details What are the 6 steps of a system design interview?

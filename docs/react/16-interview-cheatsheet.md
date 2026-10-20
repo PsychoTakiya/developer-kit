@@ -6,6 +6,8 @@ title: React Night-Before Sheet
 
 **Use this page the evening before an interview.** Part 1 is a one-page summary. Part 2 is flashcards: say the answer out loud, then open the card. Every card links to the chapter or Q&A page with the full explanation.
 
+<DeckToolbar />
+
 ## Part 1: one-page summary
 
 **Rendering:** state/props change → **render** (call components, build elements) → **reconcile** (diff with the previous tree, keys match list items) → **commit** (apply DOM changes, then layout effects, then effects). A parent re-render re-renders all children unless they're memoised and their props are equal.

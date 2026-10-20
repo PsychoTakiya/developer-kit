@@ -11,15 +11,15 @@ hero:
       text: Start the study plan
       link: /start-here/study-plan
     - theme: alt
-      text: Quick revision
-      link: /start-here/quick-revision
+      text: Review flashcards
+      link: /start-here/review
     - theme: alt
       text: System design
       link: /system-design/00-interview-framework
 
 features:
   - title: 🧭 Start Here
-    details: An 8-week plan, a spaced-repetition revision tracker, and every flashcard deck in one hub.
+    details: An 8-week plan with checkboxes, flashcard review with spaced repetition, editable trackers, and a progress dashboard.
     link: /start-here/study-plan
   - title: 🟨 JavaScript & TypeScript
     details: Closures, this, the event loop with output puzzles, utilities to implement from scratch, and TypeScript.

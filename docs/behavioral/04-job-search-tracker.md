@@ -52,7 +52,9 @@ Keep it short, link the specific job, and make it easy to say yes.
 
 ## Application tracker
 
-Copy into a spreadsheet if you prefer. Stages: Applied → Recruiter screen → Technical screen → Onsite/loop → Offer / Rejected.
+Fill it in on the site and use **+ Add row** as you apply. Stages: Applied → Recruiter screen → Technical screen → Onsite/loop → Offer / Rejected. The trackers on this page are saved in this browser; back them up from [My Progress](/start-here/progress).
+
+<TrackerTable id="applications" addable>
 
 | Company | Role / level | Source (referral, recruiter, direct) | Applied | Stage | Next step + date | Contact | Notes |
 |---|---|---|---|---|---|---|---|
@@ -62,16 +64,24 @@ Copy into a spreadsheet if you prefer. Stages: Applied → Recruiter screen → 
 | | | | | | | | |
 | | | | | | | | |
 
+</TrackerTable>
+
 ## After each interview (5 minutes, same day)
 
 Write these down while they're fresh. They're the most valuable revision material you'll have.
+
+<TrackerTable id="interview-notes" addable>
 
 | Company | Round | Questions asked | What went well | What to fix | Topics to revise |
 |---|---|---|---|---|---|
 | | | | | | |
 | | | | | | |
 
+</TrackerTable>
+
 ## Offer comparison
+
+<TrackerTable id="offers">
 
 | | Offer A | Offer B |
 |---|---|---|
@@ -85,3 +95,5 @@ Write these down while they're fresh. They're the most valuable revision materia
 | Growth / learning | | |
 | Work mode / location | | |
 | Gut feeling (1–5) | | |
+
+</TrackerTable>

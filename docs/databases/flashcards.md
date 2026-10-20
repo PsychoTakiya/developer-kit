@@ -6,6 +6,8 @@ title: Database Flashcards
 
 Say the answer out loud before opening each card.
 
+<DeckToolbar />
+
 ::: details INNER vs LEFT JOIN?
 INNER keeps only matching rows. LEFT keeps all left rows, with NULLs where there's no match. Use LEFT + `IS NULL` to find rows without a match.
 :::

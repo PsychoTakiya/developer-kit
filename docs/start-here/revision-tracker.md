@@ -4,7 +4,7 @@ title: Revision Tracker
 
 # Revision Tracker (spaced repetition)
 
-Track **topics** here (DSA problems have their own [problem tracker](/dsa/03-problem-tracker)). Edit this file in your fork or copy the table into a spreadsheet.
+Track **topics** here (DSA problems have their own [problem tracker](/dsa/03-problem-tracker)). The tables are editable on the site: fill them in directly. Entries are saved in this browser; back them up with **Export progress** on [My Progress](./progress), which also lists the topics due today.
 
 ## How it works
 
@@ -14,11 +14,13 @@ Track **topics** here (DSA problems have their own [problem tracker](/dsa/03-pro
    - **3**: can explain the 30-second answer.
    - **4**: can explain it and handle follow-up questions.
    - **5**: could teach it, with examples and trade-offs.
-2. Set **Next review** by confidence: 1–2 → tomorrow, 3 → in 3 days, 4 → in 7 days, 5 → in 21 days.
+2. Choosing a confidence fills in **Last reviewed** (today) and **Next review** automatically: 1–2 → tomorrow, 3 → in 3 days, 4 → in 7 days, 5 → in 21 days. Rows due for review are highlighted.
 3. At each review, self-test first (flashcards, or explain out loud), then update the confidence and next date.
 4. Each week, spend extra time on everything still at 1–2.
 
 ## Topics
+
+<TrackerTable id="revision-topics">
 
 | Area | Topic | Confidence (1–5) | Last reviewed | Next review | Notes / what I keep forgetting |
 |---|---|---|---|---|---|
@@ -67,10 +69,16 @@ Track **topics** here (DSA problems have their own [problem tracker](/dsa/03-pro
 | Behavioral | Project deep dive | | | | |
 | Cert | AWS AI Practitioner domains | | | | |
 
+</TrackerTable>
+
 ## Mock interview log
+
+<TrackerTable id="mock-log" addable>
 
 | Date | Type (coding / design / behavioral) | With | Score (1–5) | Main feedback | Action |
 |---|---|---|---|---|---|
 | | | | | | |
 | | | | | | |
 | | | | | | |
+
+</TrackerTable>
