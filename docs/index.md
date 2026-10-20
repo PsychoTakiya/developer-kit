@@ -1,60 +1,57 @@
 ---
-title: AWS AI Practitioner Study Guide
+layout: home
+title: Developer Kit
+
+hero:
+  name: Developer Kit
+  text: Interview-ready engineering notes
+  tagline: A study and quick-revision kit for SWE II and Senior full-stack JavaScript interviews. Learn it, test yourself, and recall it under pressure.
+  actions:
+    - theme: brand
+      text: Start the study plan
+      link: /start-here/study-plan
+    - theme: alt
+      text: Review flashcards
+      link: /start-here/review
+    - theme: alt
+      text: System design
+      link: /system-design/00-interview-framework
+
+features:
+  - title: 🧭 Start Here
+    details: An 8-week plan with checkboxes, flashcard review with spaced repetition, editable trackers, and a progress dashboard.
+    link: /start-here/study-plan
+  - title: 🟨 JavaScript & TypeScript
+    details: Closures, this, the event loop with output puzzles, utilities to implement from scratch, and TypeScript.
+    link: /javascript/01-core-language
+  - title: ⚛️ React
+    details: Rendering, hooks, state, performance, testing, SSR and Server Components, plus a night-before sheet.
+    link: /react/00-preface
+  - title: 🚀 Node & Express
+    details: Event loop, streams, Express, security, profiling, architecture and scaling.
+    link: /node-express/00-node-express-preface
+  - title: 🏗️ System Design
+    details: A 6-step framework, building blocks, five case studies, and frontend system design.
+    link: /system-design/00-interview-framework
+  - title: 🧮 DSA
+    details: 15 patterns with tested JavaScript templates and an 81-problem tracker with spaced repetition.
+    link: /dsa/01-patterns
+  - title: 🗄️ Databases & SQL
+    details: Joins, indexes, transactions and isolation, plus 14 SQL exercises with answers.
+    link: /databases/01-sql-fundamentals
+  - title: 🌐 Web Fundamentals
+    details: URL to pixels, HTTP versions, CORS, caching, Core Web Vitals and web security.
+    link: /web-fundamentals/01-http-networking
+  - title: 🗣️ Behavioral & Career
+    details: STAR story bank, intro pitch, project deep dive, senior signals, negotiation and job search trackers.
+    link: /behavioral/01-story-bank
+  - title: 💡 React Q&A Deep Dives
+    details: Long-form interview Q&A on hooks, React 19, state management, Redux Toolkit and TanStack Query.
+    link: /qna/REACT_MASTERY_GUIDE
+  - title: 📐 Core Concepts
+    details: In-depth scalability, high availability and microservices vs monolith.
+    link: /core-concepts/01-scalability
+  - title: ☁️ AWS AI Practitioner
+    details: All five exam domains with MCQ practice.
+    link: /aws-ai-practitioner/
 ---
-
-# AWS AI Practitioner Study Guide
-
-Welcome to your comprehensive study guide for the AWS Certified AI Practitioner exam. This guide includes detailed content and practice questions across all exam domains.
-
-## About This Guide
-
-This study guide is designed to help you prepare for the AWS Certified AI Practitioner certification. Each section includes:
-
-- Comprehensive coverage of exam topics
-- 50 multiple-choice questions per domain
-- Detailed explanations for all answers
-- Real-world AWS AI/ML service examples
-
-## Study Materials
-
-### Overview
-
-- [Comprehensive Overview](/aws-ai-practitioner/overview) - Complete introduction to AWS AI/ML
-- [Overview MCQs](/aws-ai-practitioner/overview-mcq) - 50 practice questions covering overview concepts
-
-### Exam Domains
-
-1. [Domain 1: Fundamentals of AI and ML](/aws-ai-practitioner/domain-1-fundamentals) - Core concepts and terminology
-2. [Domain 2: Fundamentals of Generative AI](/aws-ai-practitioner/domain-2-generative-ai) - LLMs, transformers, and foundation models
-3. [Domain 3: Applications of Foundation Models](/aws-ai-practitioner/domain-3-applications) - Practical use cases and implementation
-4. [Domain 4: Guidelines for Responsible AI](/aws-ai-practitioner/domain-4-responsible-ai) - Ethics, fairness, and best practices
-5. [Domain 5: Security, Compliance & Governance](/aws-ai-practitioner/domain-5-security-compliance) - Security frameworks and compliance
-
-### AWS AI/ML Services
-
-- [AWS AI/ML Services Guide](/aws-ai-practitioner/aws-services) - Comprehensive coverage of SageMaker, Bedrock, and other services
-
-## How to Use This Guide
-
-1. Start with the Overview to understand AWS AI/ML fundamentals
-2. Study each domain sequentially
-3. Practice with the MCQs to test your knowledge
-4. Review AWS Services to understand practical implementations
-5. Revisit areas where you need more practice
-
-## Local Development
-
-```bash
-npm install
-npm run docs:dev
-```
-
-## Build for Production
-
-```bash
-npm run docs:build
-```
-
-## PDF Generation (Optional)
-
-Use a headless browser (e.g. `playwright` or `puppeteer`) to print the built pages to PDF. A dedicated script can be added later.
