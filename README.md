@@ -76,7 +76,7 @@ Create new markdown files in the appropriate directory and update the sidebar in
 
 - 🎨 Beautiful, responsive design
 - 🌙 Dark mode support
-- 🔍 Full-text search
+- 🔍 Full-text search (VitePress local search, `Ctrl+K`)
 - 📱 Mobile-friendly
 - ⚡ Fast navigation
 - 📝 Rich markdown support
